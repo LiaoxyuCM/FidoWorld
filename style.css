@@ -30,7 +30,19 @@
     background-color: #f4f4f4;
     font-variant: normal;
 }
-.container .text a, b, i, u, strong, em, p, h1, h2, h3, h4, h5, h6 {
+.container .text a,
+.container .text b,
+.container .text i,
+.container .text u,
+.container .text strong,
+.container .text em,
+.container .text p,
+.container .text h1,
+.container .text h2,
+.container .text h3,
+.container .text h4,
+.container .text h5,
+.container .text h6 {
     background-color: #fff;
 }
 #create {
@@ -79,6 +91,6 @@
     cursor: pointer;
 }
 .popup textarea {
-    width: 100px;
-    height: 75px;
+    width: 500px;
+    height: 400px;
 }
