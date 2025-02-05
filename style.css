@@ -30,7 +30,7 @@
     background-color: #f4f4f4;
     font-variant: normal;
 }
-.container .text a, b, i, u, strong, em, p {
+.container .text a, b, i, u, strong, em, p, h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
 }
 #create {
@@ -49,6 +49,9 @@
 }
 #searchButton:active, #create:active {
     box-shadow: none;
+}
+#search {
+    font-variant: normal;
 }
 .popup {
     position: fixed;
@@ -74,4 +77,8 @@
 }
 .popup button {
     cursor: pointer;
+}
+.popup textarea {
+    width: 100px;
+    height: 75px;
 }
