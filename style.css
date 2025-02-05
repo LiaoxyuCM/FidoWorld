@@ -1,0 +1,77 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f4f4f4;
+}
+.container {
+    line-height: 1.6;
+    margin: 0;
+    padding: 10px;
+}
+#search, #searchButton, #create, .container .text {
+    font: small-caps 20px 'Quicksand', sans-serif;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container .text b, strong { color: #900; }
+.container .text i, em { color: #009; }
+.container .text u { color: #090; }
+.container .text a {
+    color: #a0f;
+    text-decoration: none;
+}
+.container .text a:hover {
+    text-decoration: underline;
+}
+.container .text code {
+    font-family: '0xProto Nerd Font Mono', monospace;
+    background-color: #f4f4f4;
+    font-variant: normal;
+}
+.container .text a, b, i, u, strong, em, p {
+    background-color: #fff;
+}
+#create {
+    float: right;
+    border-radius: 20px;
+    font-size: 2em;
+    margin: 0;
+    padding: 10px 20px;
+}
+#search, #searchButton, #create {
+    border: none;
+    transition: .1s all ease-in-out;
+}
+#searchButton:hover, #create:hover {
+    cursor: pointer;
+}
+#searchButton:active, #create:active {
+    box-shadow: none;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.popup label, .popup input, .popup button, .popup textarea {
+    display: block;
+    border: none;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+.popup label {
+    font-size: 1.2em;
+    background-color: #fff;
+}
+.popup button {
+    cursor: pointer;
+}
