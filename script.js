@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const header = document.createElement('h2');
             header.textContent = headerText;
 
-            const main = document.createElement('p');
+            const main = document.createElement('div');
             main.className = 'text';
             main.innerHTML = marked.parse(mainText); // Use a Markdown parser like marked.js
 
