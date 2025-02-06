@@ -109,8 +109,10 @@
 }
 #popupheader {
     text-align: center;
+    background-color: #fff;
 }
 #popuphint {
     color: #aaa;
-    font-size: 5px;
+    background-color: #fff;
+    font-size: 10px;
 }
