@@ -58,13 +58,17 @@
     background-color: #f4f4f4;
     width: 200px;
 }
-.container .text input[type="checkbox"] {
+.container .text input[type="button"],
+.container .text input[type="reset"],
+.container .text input[type="submit"],
+.container .text button {
     border: none;
-    border-radius: 5px;
-    background-color: #f4f4f4;
+    border-radius: 10px;
+    background-color: #bbf;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
-.container .text input[type="checkbox"]:checked {
-    background-color: #090;
+.container .text input[type="reset"] {
+    background-color: #fbb;
 }
 #create {
     float: right;
