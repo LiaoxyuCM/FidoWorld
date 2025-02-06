@@ -15,6 +15,9 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.container h2 {
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
+}
 .container .text b, strong { color: #900; }
 .container .text i, em { color: #009; }
 .container .text u { color: #090; }
@@ -44,9 +47,6 @@
 .container .text h5,
 .container .text h6 {
     background-color: #fff;
-}
-.container h2 {
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
 #create {
     float: right;
