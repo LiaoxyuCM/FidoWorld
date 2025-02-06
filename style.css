@@ -26,7 +26,7 @@
     text-decoration: underline;
 }
 .container .text code {
-    font-family: '0xProto Nerd Font Mono', monospace;
+    font-family: '0xProto Nerd Font Mono','Cascadia Mono', 'Consolas', monospace;
     background-color: #f4f4f4;
     font-variant: normal;
 }
@@ -44,6 +44,9 @@
 .container .text h5,
 .container .text h6 {
     background-color: #fff;
+}
+.container h2 {
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
 #create {
     float: right;
@@ -92,5 +95,5 @@
 }
 .popup textarea {
     width: 500px;
-    height: 275px;
+    height: 260px;
 }
