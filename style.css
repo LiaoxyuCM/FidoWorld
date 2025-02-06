@@ -22,7 +22,7 @@
     text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
 .container .text b, strong { color: #900; }
-.container .text i, em { color: #009; }
+.container .text i, em { color: #00B; }
 .container .text u { color: #090; }
 .container .text a {
     color: #a0f;
@@ -50,6 +50,7 @@
 .container .text h5,
 .container .text h6 {
     background-color: #fff;
+    text-shadow: none;
 }
 #create {
     float: right;
@@ -79,7 +80,7 @@
     background: #fff;
     padding: 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .popup label, .popup input, .popup button, .popup textarea {
@@ -98,5 +99,5 @@
 }
 .popup textarea {
     width: 500px;
-    height: 260px;
+    height: 250px;
 }
