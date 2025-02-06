@@ -4,6 +4,16 @@
 }
 #title {
     text-align: center;
+    overflow: hidden;
+    animation: 2s typing forwards;
+}
+@keyframes typing {
+    from {
+        width: 1ch;
+    }
+    to {
+        width: 9ch;
+    }
 }
 .container {
     line-height: 1.6;
