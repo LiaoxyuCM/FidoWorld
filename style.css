@@ -64,8 +64,10 @@
 .container .text button {
     border: none;
     border-radius: 10px;
+    height: 20px
     background-color: #bbf;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
+    cursor: pointer;
 }
 .container .text input[type="reset"] {
     background-color: #fbb;
