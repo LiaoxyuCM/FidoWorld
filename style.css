@@ -97,7 +97,20 @@
 .popup button {
     cursor: pointer;
 }
+.popup button#submit {
+    background-color: #ccf;
+}
+.popup button#close {
+    background-color: #fcc;
+}
 .popup textarea {
     width: 500px;
     height: 250px;
+}
+#popupheader {
+    text-align: center;
+}
+#popuphint {
+    color: #aaa;
+    font-size: 5px;
 }
