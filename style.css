@@ -24,6 +24,7 @@
 .container .text b, strong { color: #900; }
 .container .text i, em { color: #00B; }
 .container .text u { color: #090; }
+.container .text del { color: #999; }
 .container .text a {
     color: #a0f;
     text-decoration: none;
@@ -42,6 +43,7 @@
 .container .text u,
 .container .text strong,
 .container .text em,
+.container .text del,
 .container .text p,
 .container .text h1,
 .container .text h2,
