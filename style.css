@@ -2,6 +2,9 @@
     font-family: 'Quicksand', sans-serif;
     background-color: #f4f4f4;
 }
+#title {
+    text-align: center;
+}
 .container {
     line-height: 1.6;
     margin: 0;
