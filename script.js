@@ -17,12 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('#create').style.display = 'none';
         popup.innerHTML = `
             <div class="popup">
+                <h3 id="popupheader">New paragraph</h3>
                 <label for="header">Header:</label>
                 <input type="text" id="header"><br>
                 <label for="main">Main:</label>
                 <textarea id="main" placeholder="Valid markdown, edit markdown here!"></textarea><br>
                 <button id="submit">Submit</button>
                 <button id="close">Close</button>
+                <p id="popuphint">When you are created, it will append to last line.</p>
             </div>
         `;
         document.body.appendChild(popup);
