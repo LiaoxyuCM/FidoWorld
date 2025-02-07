@@ -40,7 +40,7 @@
     font-family: '0xProto Nerd Font Mono','Cascadia Mono', 'Consolas', monospace;
     background-color: #f4f4f4;
     font-variant: normal;
-    box-shadow: 5px;
+    border-radius: 5px;
 }
 .container .text input[type="text"] {
     border: none;
