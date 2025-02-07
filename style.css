@@ -32,27 +32,15 @@
 .container .text a:hover {
     text-decoration: underline;
 }
+.container .text * {
+    background-color: #fff;
+    text-shadow: none;
+}
 .container .text code {
     font-family: '0xProto Nerd Font Mono','Cascadia Mono', 'Consolas', monospace;
     background-color: #f4f4f4;
     font-variant: normal;
-}
-.container .text a,
-.container .text b,
-.container .text i,
-.container .text u,
-.container .text strong,
-.container .text em,
-.container .text del,
-.container .text p,
-.container .text h1,
-.container .text h2,
-.container .text h3,
-.container .text h4,
-.container .text h5,
-.container .text h6 {
-    background-color: #fff;
-    text-shadow: none;
+    box-shadow: 5px;
 }
 .container .text input[type="text"] {
     border: none;
