@@ -168,5 +168,9 @@ body {
     }
     #popupheader {
         color: #FFF;
+        background-color: #222;
+    }
+    #popuphint {
+        background-color: #222;
     }
 }
