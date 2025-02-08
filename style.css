@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 * {
     font-family: 'Quicksand', sans-serif;
 }
@@ -126,7 +128,7 @@ body {
 #popuphint {
     color: #aaa;
     background-color: #fff;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 @media (prefers-color-scheme: dark) {
