@@ -108,6 +108,9 @@ body {
     font-size: 1.2em;
     background-color: #fff;
 }
+.popup input, .popup textarea {
+    background-color: #f4f4f4;
+}
 .popup button {
     cursor: pointer;
 }
@@ -157,9 +160,12 @@ body {
     .popup {
         background-color: #222;
     }
-    .popup label, .popup input, .popup button, .popup textarea {
+    .popup input, .popup button, .popup textarea {
         background-color: #333;
         color: #FFF;
+    }
+    .popup label {
+        background-color: #222;
     }
     .popup button#submit {
         color: #FFF;
