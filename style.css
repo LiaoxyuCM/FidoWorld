@@ -1,5 +1,7 @@
 * {
     font-family: 'Quicksand', sans-serif;
+}
+body {
     background-color: #f4f4f4;
 }
 #title {
@@ -143,5 +145,22 @@
         color: #f7f;
         text-decoration: none;
     }
-    
+    .popup {
+        background-color: #222;
+    }
+    .popup label, .popup input, .popup button, .popup textarea {
+        background-color: #333;
+        color: #FFF;
+    }
+    .popup button#submit {
+        color: #FFF;
+        background-color: #228;
+    }
+    .popup button#close {
+        color: #FFF;
+        background-color: #822;
+    }
+    #popupheader {
+        color: #FFF;
+    }
 }
