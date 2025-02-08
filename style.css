@@ -33,7 +33,7 @@
     text-decoration: underline;
 }
 .container .text * {
-    background-color: #fff;
+    background-color: transparent;
     text-shadow: none;
 }
 .container .text code {
@@ -125,4 +125,23 @@
     color: #aaa;
     background-color: #fff;
     font-size: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+    }
+    #search, #searchButton, #create, .container .text {
+        color: #FFF;
+        background-color: #333;
+    }
+    .container .text b, strong { color: #F88; }
+    .container .text i, em { color: #88F; }
+    .container .text u { color: #8F8; }
+    .container .text del { color: #666; }
+    .container .text a {
+        color: #f7f;
+        text-decoration: none;
+    }
+    
 }
