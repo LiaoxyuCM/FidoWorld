@@ -130,7 +130,10 @@ body {
     background-color: #fff;
     font-size: 15px;
 }
-
+.error {
+    background-color: #f99;
+    color: #900;
+}
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #222;
@@ -172,5 +175,9 @@ body {
     }
     #popuphint {
         background-color: #222;
+    }
+    .error {
+        background-color: #922;
+        color: #FFF;
     }
 }
