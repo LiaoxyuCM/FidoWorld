@@ -8,6 +8,7 @@ body {
 }
 #title {
     text-align: center;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
 .container {
     line-height: 1.6;
@@ -136,6 +137,8 @@ body {
 .error {
     background-color: #f99;
     color: #900;
+    border: none;
+    border-radius: 10px;
 }
 @media (prefers-color-scheme: dark) {
     body {
@@ -166,6 +169,7 @@ body {
     }
     .popup label {
         background-color: #222;
+        color: #FFF;
     }
     .popup button#submit {
         color: #FFF;
