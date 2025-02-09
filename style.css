@@ -160,6 +160,9 @@ body {
         color: #f7f;
         text-decoration: none;
     }
+    .container .text code {
+        background-color: #333;
+    }
     .popup {
         background-color: #222;
     }
