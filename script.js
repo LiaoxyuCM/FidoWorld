@@ -14,26 +14,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.getElementById('create').addEventListener('click', function() {
         const popup = document.createElement('div');
+        popup.className = "popup"
         document.querySelector('#create').style.display = 'none';
         popup.innerHTML = `
-            <div class="popup">
-                <h3 id="popupheader">New paragraph</h3>
-                <label for="header">Header:</label>
-                <input type="text" id="header"><br>
-                <label for="main">Main:</label>
-                <textarea id="main" placeholder="Valid markdown, edit markdown here!"></textarea><br>
-                <button id="submit">Submit</button>
-                <button id="close">Close</button>
-                <label for="addToFirstLine" class="check">
-                    <input type="checkbox" id="addToFirstLine">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M 2 11 L 8 16 M 8 16 L 17 6" stroke="#FFF" stroke-width="0.5" fill="none"/>
-                        </svg> 
-                    </span>
-                </label>
-                <p id="popuphint">↑ [New features] Add to first line.</p>
-            </div>
+            <h3 id="popupheader">New paragraph</h3>
+            <label for="header">Header:</label>
+            <input type="text" id="header"><br>
+            <label for="main">Main:</label>
+            <textarea id="main" placeholder="Valid markdown, edit markdown here!"></textarea><br>
+            <button id="submit">Submit</button>
+            <button id="close">Close</button>
+            <br>
+            <label for="addToFirstLine" class="check">
+                <input type="checkbox" id="addToFirstLine">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M 2 11 L 8 16 M 8 16 L 17 6" stroke="#FFF" stroke-width="0.5" fill="none"/>
+                    </svg> 
+                </span>
+            </label>
+            <p id="popuphint">↑ [New features] Add to first line.</p>
         `;
         document.body.appendChild(popup);
 
