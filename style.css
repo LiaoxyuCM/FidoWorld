@@ -44,6 +44,9 @@ body {
 .container .text * {
     background-color: transparent;
     text-shadow: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 .container .text code {
     font-family: '0xProto Nerd Font Mono','Cascadia Mono', 'Consolas', monospace;
