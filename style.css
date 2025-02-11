@@ -108,7 +108,6 @@ body {
 .popup label, .popup input, .popup button, .popup textarea {
     display: block;
     border: none;
-    margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
 }
@@ -140,6 +139,30 @@ body {
     color: #aaa;
     background-color: #fff;
     font-size: 12px;
+    margin: 0;
+}
+.popup label.check {
+    padding: 0;
+}
+.popup label.check span {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #888;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+#addToFirstLine {
+    display: none;
+}
+#addToFirstLine:checked + span {
+    background-color: #4F8;
+}
+#addToFirstLine:not(:checked) + span svg {
+    display: none;
 }
 @media (prefers-color-scheme: dark) {
     body {
@@ -166,6 +189,7 @@ body {
     }
     .popup {
         background-color: #222;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
     .popup input, .popup button, .popup textarea {
         background-color: #333;
@@ -190,8 +214,10 @@ body {
     #popuphint {
         background-color: #222;
     }
-    .error {
-        background-color: #922;
-        color: #FFF;
+    .popup label.check span {
+        background-color: #666;
+    }
+    #addToFirstLine:checked + span {
+        background-color: #090;
     }
 }

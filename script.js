@@ -24,7 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 <textarea id="main" placeholder="Valid markdown, edit markdown here!"></textarea><br>
                 <button id="submit">Submit</button>
                 <button id="close">Close</button>
-                <input type="checkbox" id="addToFirstLine">
+                <label for="addToFirstLine" class="check">
+                    <input type="checkbox" id="addToFirstLine">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M 2 11 L 8 16 M 8 16 L 17 6" stroke="#FFF" stroke-width="0.5" fill="none"/>
+                        </svg> 
+                    </span>
+                </label>
                 <p id="popuphint">↑ [New features] Add to first line.</p>
             </div>
         `;
