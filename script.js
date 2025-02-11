@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <textarea id="main" placeholder="Valid markdown, edit markdown here!"></textarea><br>
                 <button id="submit">Submit</button>
                 <button id="close">Close</button>
-                <p id="popuphint">When you are created, it will append to last line.</p>
+                <input type="checkbox" id="addToFirstLine">
+                <p id="popuphint">↑ [New features] Add to first line.</p>
             </div>
         `;
         document.body.appendChild(popup);
@@ -35,10 +36,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         document.getElementById('submit').addEventListener('click', function() {
-            container = document.createElement('div');
+            const needAddToFirstLine = document.querySelector("#addToFirstLine")
+
+            const container = document.createElement('div');
             container.className = 'container';
-            document.body.appendChild(container);
-            
+
+            const containers = document.querySelector(".containers")
+            if (needAddToFirstLine.checked){
+                const firstChild = containers.firstChild;
+                containers.insertBefore(container, firstChild);
+            } else {
+                containers.appendChild(container);
+            }
             const headerText = document.getElementById('header').value;
             const mainText = document.getElementById('main').value;
 
@@ -51,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             container.appendChild(header);
             container.appendChild(main);
+            
             document.body.removeChild(popup);
             document.querySelector('#create').style.display = 'block';
         });

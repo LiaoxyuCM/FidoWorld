@@ -10,6 +10,10 @@ body {
     text-align: center;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
+.containers {
+    margin: 0;
+    padding: 0;
+}
 .container {
     line-height: 1.6;
     margin: 0;
@@ -132,13 +136,7 @@ body {
 #popuphint {
     color: #aaa;
     background-color: #fff;
-    font-size: 15px;
-}
-.error {
-    background-color: #f99;
-    color: #900;
-    border: none;
-    border-radius: 10px;
+    font-size: 12px;
 }
 @media (prefers-color-scheme: dark) {
     body {
