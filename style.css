@@ -159,7 +159,7 @@ body {
     display: none;
 }
 #addToFirstLine:checked + span {
-    background-color: #4F8;
+    background-color: #1A4;
 }
 #addToFirstLine:not(:checked) + span svg {
     display: none;

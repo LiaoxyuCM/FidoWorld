@@ -8,6 +8,8 @@ Little list box
 
 ## Version info
 
+v0.2.6 \[latest\] Optimize styles *(It is commit message)*
+
 v0.2.5 Add version info *(Excerpt from commit message)*
 
 v0.2.4 Optimize codes, Make the code more maintainable.
