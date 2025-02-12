@@ -164,6 +164,17 @@ body {
 #addToFirstLine:not(:checked) + span svg {
     display: none;
 }
+.container .delete {
+    float: right;
+    background: #f44336 !important;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin-top: -10px;
+}
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #222;

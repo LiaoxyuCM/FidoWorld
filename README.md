@@ -8,7 +8,9 @@ Little list box
 
 ## Version info
 
-v0.2.6 \[latest\] Optimize styles *(It is commit message)*
+v0.3.0 ***IMPORTANT UPDATE***&nbsp;&nbsp;&nbsp;**Add sortable function**, **optimize pop-up prompts** and **add a button to remove paragraphs**.
+
+v0.2.6 Optimize styles *(It is commit message)*
 
 v0.2.5 Add version info *(Excerpt from commit message)*
 

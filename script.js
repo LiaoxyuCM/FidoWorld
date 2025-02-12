@@ -25,15 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="submit">Submit</button>
             <button id="close">Close</button>
             <br>
-            <label for="addToFirstLine" class="check">
-                <input type="checkbox" id="addToFirstLine">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                        <path d="M 2 11 L 8 16 M 8 16 L 17 6" stroke="#FFF" stroke-width="1" fill="none"/>
-                    </svg> 
-                </span>
-            </label>
-            <p id="popuphint">↑ [New features] Add to first line.</p>
+            <p id="popuphint">It always add to first line.</p>
         `;
         document.body.appendChild(popup);
 
@@ -43,18 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         document.getElementById('submit').addEventListener('click', function() {
-            const needAddToFirstLine = document.querySelector("#addToFirstLine")
 
             const container = document.createElement('div');
             container.className = 'container';
 
             const containers = document.querySelector(".containers")
-            if (needAddToFirstLine.checked){
-                const firstChild = containers.firstChild;
-                containers.insertBefore(container, firstChild);
-            } else {
-                containers.appendChild(container);
-            }
+            
+            const firstChild = containers.firstChild;
+            containers.insertBefore(container, firstChild);
+
             const headerText = document.getElementById('header').value;
             const mainText = document.getElementById('main').value;
 
@@ -70,6 +59,19 @@ document.addEventListener('DOMContentLoaded', function() {
             
             document.body.removeChild(popup);
             document.querySelector('#create').style.display = 'block';
+            
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete';
+            deleteBtn.textContent = '×';
+            container.appendChild(deleteBtn);
+
+            deleteBtn.addEventListener('click', () => {
+                container.remove();
+            });
         });
+    });
+    const containerslist = document.querySelector('.containers');
+    new Sortable(containerslist, {
+        animation: 150
     });
 });
