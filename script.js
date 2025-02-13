@@ -71,16 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    function isDesktop() {
-        const userAgent = navigator.userAgent;
-        const mobileAgents = [
-            'Android', 'webOS', 'iPhone', 'iPad', 'iPod', 
-            'BlackBerry', 'Windows Phone', 'Mobile', 'Tablet'
-        ];
-        
-        return !new RegExp(mobileAgents.join('|'), 'i').test(userAgent);
-    }
-
     const containerslist = document.querySelector('.containers');
     const sortButton = document.querySelector('.sort');
     let sort = null;
