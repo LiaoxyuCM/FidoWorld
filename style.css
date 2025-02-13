@@ -19,7 +19,7 @@ body {
     margin: 0;
     padding: 10px;
 }
-#search, #searchButton, #create, .container .text {
+#search, #searchButton, #create, .container .text, button.sort {
     font: small-caps 20px 'Quicksand', sans-serif;
     color: #333;
     background-color: #fff;
@@ -175,11 +175,18 @@ body {
     cursor: pointer;
     margin-top: -10px;
 }
+button.sort {
+    border: none;
+    position: fixed;
+    top: 80%;
+    left: 100%;
+    transform: translate(-100%, -80%);
+}
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #222;
     }
-    #search, #searchButton, #create, .container .text {
+    #search, #searchButton, #create, .container .text, button.sort {
         color: #FFF;
         background-color: #333;
     }

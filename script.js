@@ -70,8 +70,31 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    function isDesktop() {
+        const userAgent = navigator.userAgent;
+        const mobileAgents = [
+            'Android', 'webOS', 'iPhone', 'iPad', 'iPod', 
+            'BlackBerry', 'Windows Phone', 'Mobile', 'Tablet'
+        ];
+        
+        return !new RegExp(mobileAgents.join('|'), 'i').test(userAgent);
+    }
+
     const containerslist = document.querySelector('.containers');
-    new Sortable(containerslist, {
-        animation: 150
+    const sortButton = document.querySelector('.sort');
+    let sort = null;
+    document.body.appendChild(sortButton);
+    sortButton.addEventListener('click', () => {
+        if (sortButton.textContent === 'Sort') {
+            sort = new Sortable(containerslist, {
+                animation: 150
+            });
+            sortButton.textContent = 'Complete sorting';
+        } else {
+            sort.destroy();
+            sort = null;
+            sortButton.textContent = 'Sort';
+        };
     });
 });

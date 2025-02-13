@@ -8,6 +8,8 @@ Little list box
 
 ## Version info
 
+v0.3.1 \[latest\] For the consideration of phone users and pad users, Add sort button and set button's style.
+
 v0.3.0 ***IMPORTANT UPDATE***&nbsp;&nbsp;&nbsp;**Add sortable function**, **optimize pop-up prompts** and **add a button to remove paragraphs**.
 
 v0.2.6 Optimize styles *(It is commit message)*
