@@ -19,7 +19,7 @@ body {
     margin: 0;
     padding: 10px;
 }
-#search, #searchButton, #create, .container .text, button.sort {
+#search, #searchButton, #searchType, #create, .container .text, button.sort {
     font: small-caps 20px 'Quicksand', sans-serif;
     color: #333;
     background-color: #fff;
@@ -81,14 +81,14 @@ body {
     margin: 0;
     padding: 10px 20px;
 }
-#search, #searchButton, #create {
+#search, #searchButton, #create, #searchType {
     border: none;
     transition: .1s all ease-in-out;
 }
 #searchButton:hover, #create:hover {
     cursor: pointer;
 }
-#searchButton:active, #create:active {
+#searchButton:active, #create:active, #searchType:active {
     box-shadow: none;
 }
 #search {
@@ -186,7 +186,7 @@ button.sort {
     body {
         background-color: #222;
     }
-    #search, #searchButton, #create, .paragraph .text, button.sort {
+    #search, #searchButton, #searchType, #create, .paragraph .text, button.sort {
         color: #FFF;
         background-color: #333;
     }

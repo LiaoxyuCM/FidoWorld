@@ -2,14 +2,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('searchButton').addEventListener('click', () => {
         const keyword = document.getElementById('search').value.toLowerCase();
         const paragraphs = document.querySelectorAll('.paragraph');
+        const searchType = document.getElementById('searchType').value;
 
         paragraphs.forEach(paragraph => {
-            const text = paragraph.textContent.toLowerCase();
+            let text = '';
+            if (searchType === 'header') {
+                text = paragraph.querySelector('h2').textContent.toLowerCase();
+            } else if (searchType === 'main') {
+                text = paragraph.querySelector('.text').textContent.toLowerCase();
+            } else {
+                text = paragraph.textContent.toLowerCase();
+            };
+
             if (text.includes(keyword)) {
                 paragraph.style.display = 'block';
             } else {
                 paragraph.style.display = 'none';
-            }
+            };
         });
     });
     document.getElementById('create').addEventListener('click', () => {
@@ -71,16 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const containerslist = document.querySelector('.container');
+    const container = document.querySelector('.container');
     const sortButton = document.querySelector('.sort');
     let sort = undefined;
     document.body.appendChild(sortButton);
     sortButton.addEventListener('click', () => {
-        if (sortButton.textContent === 'Sort') {
-            sort = new Sortable(containerslist, {
+        if (!sort) {
+            sort = new Sortable(container, {
                 animation: 150
             });
-            sortButton.textContent = 'Complete sorting';
+            sortButton.textContent = 'Complete';
         } else {
             sort.destroy();
             sort = undefined;

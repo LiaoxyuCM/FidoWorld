@@ -12,6 +12,11 @@
 <body>
     <h1 id="title">FidoWorld</h1>
     <input type="text" id="search" placeholder="Search paragraphs...">
+    <select id="searchType">
+        <option value="header">Just header</option>
+        <option value="main">Just main</option>
+        <option value="all" selected>Header + main</option>
+    </select>
     <button id="searchButton">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" 
@@ -59,39 +64,7 @@
                 <h4>Header4</h4>
                 <h5>Header5</h5>
                 <h6>Header6</h6>
-                <p>Default&nbsp;<b>Bold</b>&nbsp;<i>Italic</i>&nbsp;<u>Underline</u>&nbsp;<del>Deleted</del>&nbsp;<a href="#">Anchor/Link</a></p>
-            </div>
-        </div>
-        <div class="paragraph" name="Coding Tools">
-            <h2>Coding Tools</h2>
-            <div class="text">
-                <a href="https://github.com">Github</a> is a <i>coding tool</i> that provides version control using Git.
-                <br>
-                <a href="https://codepen.io">CodePen</a> is a <i>coding tool</i> that allows users to share and collaborate on front-end development projects.
-                <br>
-                <a href="https://jsfiddle.net">JSFiddle</a> is a <i>coding tool</i> that allows users to share and collaborate on front-end development projects.
-                <br>
-                <a href="https://repl.it">Repl.it</a> is a <i>coding tool</i> that allows users to share and collaborate on front-end development projects.
-            </div>
-        </div>
-        <div class="paragraph" name="Programming languages">
-            <h2>Programming languages</h2>
-            <div class="text">
-                <a href="https://python.org">Python</a> is a <i>programming language</i> that is easy to learn and widely used for web development, data analysis, and artificial intelligence.
-                <br>
-                <a href="https://www.javascript.com">JavaScript</a> is a <i>programming language</i> that is widely used for front-end and back-end web development.
-                <br>
-                <a href="https://www.typescriptlang.org">TypeScript</a> is a <i>programming language</i> that is a superset of JavaScript and adds static typing to the language.
-                <br>
-                <a href="https://www.ruby-lang.org">Ruby</a> is a <i>programming language</i> that is known for its simplicity and productivity in web development.
-                <br>
-                <a href="https://www.php.net">PHP</a> is a <i>programming language</i> that is widely used for server-side web development.
-                <br>
-                <a href="https://www.java.com">Java</a> is a <i>programming language</i> that is widely used for building enterprise applications and Android apps.
-                <br>
-                <a href="https://www.kotlinlang.org">Kotlin</a> is a <i>programming language</i> that is used for building Android apps and web applications.
-                <br>
-                <a href="https://www.dart.dev">Dart</a> is a <i>programming language</i> that is used for building mobile, desktop, and web applications.
+                <p>Default&nbsp;<b>Bold</b>&nbsp;<i>Italic</i>&nbsp;<u>Underline</u>&nbsp;<del>Deleted</del>&nbsp;<a href="javascript:;">Anchor/Link</a></p>
             </div>
         </div>
         <div class="paragraph" name="About FidoWorld">
