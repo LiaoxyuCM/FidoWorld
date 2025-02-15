@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('searchButton').addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('searchButton').addEventListener('click', () => {
         const keyword = document.getElementById('search').value.toLowerCase();
-        const containers = document.querySelectorAll('.container');
+        const paragraphs = document.querySelectorAll('.paragraph');
 
-        containers.forEach(container => {
-            const text = container.textContent.toLowerCase();
+        paragraphs.forEach(paragraph => {
+            const text = paragraph.textContent.toLowerCase();
             if (text.includes(keyword)) {
-                container.style.display = 'block';
+                paragraph.style.display = 'block';
             } else {
-                container.style.display = 'none';
+                paragraph.style.display = 'none';
             }
         });
     });
-    document.getElementById('create').addEventListener('click', function() {
+    document.getElementById('create').addEventListener('click', () => {
         const popup = document.createElement('div');
         popup.className = "popup"
         document.querySelector('#create').style.display = 'none';
@@ -29,20 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         document.body.appendChild(popup);
 
-        document.getElementById('close').addEventListener('click', function() {
+        document.getElementById('close').addEventListener('click', () => {
             document.body.removeChild(popup);
             document.querySelector('#create').style.display = 'block';
         });
 
-        document.getElementById('submit').addEventListener('click', function() {
+        document.getElementById('submit').addEventListener('click', () => {
 
-            const container = document.createElement('div');
-            container.className = 'container';
+            const paragraph = document.createElement('div');
+            paragraph.className = 'paragraph';
 
-            const containers = document.querySelector(".containers")
+            const containers = document.querySelector(".container")
             
             const firstChild = containers.firstChild;
-            containers.insertBefore(container, firstChild);
+            containers.insertBefore(paragraph, firstChild);
 
             const headerText = document.getElementById('header').value;
             const mainText = document.getElementById('main').value;
@@ -54,26 +54,26 @@ document.addEventListener('DOMContentLoaded', function() {
             main.className = 'text';
             main.innerHTML = marked.parse(mainText); // Use a Markdown parser like marked.js
 
-            container.appendChild(header);
-            container.appendChild(main);
+            paragraph.appendChild(header);
+            paragraph.appendChild(main);
             
             document.body.removeChild(popup);
             document.querySelector('#create').style.display = 'block';
             
             const deleteBtn = document.createElement('button');
             deleteBtn.className = 'delete';
-            deleteBtn.textContent = '×';
-            container.appendChild(deleteBtn);
+            deleteBtn.textContent = '-';
+            paragraph.appendChild(deleteBtn);
 
             deleteBtn.addEventListener('click', () => {
-                container.remove();
+                paragraph.remove();
             });
         });
     });
 
-    const containerslist = document.querySelector('.containers');
+    const containerslist = document.querySelector('.container');
     const sortButton = document.querySelector('.sort');
-    let sort = null;
+    let sort = undefined;
     document.body.appendChild(sortButton);
     sortButton.addEventListener('click', () => {
         if (sortButton.textContent === 'Sort') {
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sortButton.textContent = 'Complete sorting';
         } else {
             sort.destroy();
-            sort = null;
+            sort = undefined;
             sortButton.textContent = 'Sort';
         };
     });

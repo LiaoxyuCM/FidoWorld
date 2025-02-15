@@ -8,7 +8,9 @@ Little list box
 
 ## Version info
 
-v0.3.1 \[latest\] For the consideration of phone users and pad users, Add sort button and set button's style.
+v0.3.2 \[Latest\] Modify the class name uniformly to make it easier to maintain.
+
+v0.3.1 For the consideration of phone users and pad users, Add sort button and set button's style.
 
 v0.3.0 ***IMPORTANT UPDATE***&nbsp;&nbsp;&nbsp;**Add sortable function**, **optimize pop-up prompts** and **add a button to remove paragraphs**.
 
@@ -41,7 +43,3 @@ v0.1.3 Change tag "p" to "div" when class="text" *(Excerpt from commit message)*
 v0.1.2 Deleted some paragraphs because FidoWorld should be concise.
 
 v0.1.1 Add more styles.
-
-v0.1.0 Published our codes and created web pages.
-
-v0.0.1 Program started.

@@ -10,11 +10,11 @@ body {
     text-align: center;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
-.containers {
+.container {
     margin: 0;
     padding: 0;
 }
-.container {
+.paragraph {
     line-height: 1.6;
     margin: 0;
     padding: 10px;
@@ -27,43 +27,43 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.container h2 {
+.paragraph h2 {
     text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
-.container .text b, strong { color: #900; }
-.container .text i, em { color: #00B; }
-.container .text u { color: #090; }
-.container .text del { color: #999; }
-.container .text a {
+.paragraph .text b, strong { color: #900; }
+.paragraph .text i, em { color: #00B; }
+.paragraph .text u { color: #090; }
+.paragraph .text del { color: #999; }
+.paragraph .text a {
     color: #a0f;
     text-decoration: none;
 }
-.container .text a:hover {
+.paragraph .text a:hover {
     text-decoration: underline;
 }
-.container .text * {
+.paragraph .text * {
     background-color: transparent;
     text-shadow: none;
     margin: 0;
     padding: 0;
     border: 0;
 }
-.container .text code {
+.paragraph .text code {
     font-family: '0xProto Nerd Font Mono','Cascadia Mono', 'Consolas', monospace;
     background-color: #f4f4f4;
     font-variant: normal;
     border-radius: 5px;
 }
-.container .text input[type="text"] {
+.paragraph .text input[type="text"] {
     border: none;
     border-radius: 5px;
     background-color: #f4f4f4;
     width: 200px;
 }
-.container .text input[type="button"],
-.container .text input[type="reset"],
-.container .text input[type="submit"],
-.container .text button {
+.paragraph .text input[type="button"],
+.paragraph .text input[type="reset"],
+.paragraph .text input[type="submit"],
+.paragraph .text button {
     border: none;
     border-radius: 10px;
     height: 50px;
@@ -71,7 +71,7 @@ body {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
     cursor: pointer;
 }
-.container .text input[type="reset"] {
+.paragraph .text input[type="reset"] {
     background-color: #fbb;
 }
 #create {
@@ -164,7 +164,7 @@ body {
 #addToFirstLine:not(:checked) + span svg {
     display: none;
 }
-.container .delete {
+.paragraph .delete {
     float: right;
     background: #f44336 !important;
     width: 30px;
@@ -186,23 +186,23 @@ button.sort {
     body {
         background-color: #222;
     }
-    #search, #searchButton, #create, .container .text, button.sort {
+    #search, #searchButton, #create, .paragraph .text, button.sort {
         color: #FFF;
         background-color: #333;
     }
-    #title, .container h2 {
+    #title, .paragraph h2 {
         color: #FFF;
         text-shadow: 4px 4px 4px rgba(255, 255, 255, .2);
     }
-    .container .text b, strong { color: #F88; }
-    .container .text i, em { color: #88F; }
-    .container .text u { color: #8F8; }
-    .container .text del { color: #666; }
-    .container .text a {
+    .paragraph .text b, strong { color: #F88; }
+    .paragraph .text i, em { color: #88F; }
+    .paragraph .text u { color: #8F8; }
+    .paragraph .text del { color: #666; }
+    .paragraph .text a {
         color: #f7f;
         text-decoration: none;
     }
-    .container .text code {
+    .paragraph .text code {
         background-color: #444;
     }
     .popup {
