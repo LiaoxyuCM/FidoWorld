@@ -8,7 +8,9 @@ Little list box
 
 ## Version info
 
-v0.3.2 \[Latest\] Modify the class name uniformly to make it easier to maintain.
+v0.3.3 \[Latest\] Add a hint when the user disabled JavaScript
+
+v0.3.2 Modify the class name uniformly to make it easier to maintain.
 
 v0.3.1 For the consideration of phone users and pad users, Add sort button and set button's style.
 
