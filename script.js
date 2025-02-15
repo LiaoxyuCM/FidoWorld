@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             sort.destroy();
             sort = undefined;
-            sortButton.textContent = 'Sort';
+            sortButton.textContent = 'Drag';
         };
     });
 });
