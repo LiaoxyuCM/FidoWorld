@@ -8,7 +8,9 @@ Little list box
 
 ## Version info
 
-v0.3.4 \[Latest\] Add search filter and optimize search logic to support searching by header and main.
+v0.3.5 \[Latest\] Add the help document.
+
+v0.3.4 Add search filter and optimize search logic to support searching by header and main.
 
 v0.3.3 Add a hint when the user disabled JavaScript.
 
