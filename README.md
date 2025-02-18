@@ -8,7 +8,9 @@ Little list box
 
 ## Version info
 
-v0.3.5 \[Latest\] Add the help document.
+v0.3.6 \[Latest\] Update the help doc.
+
+v0.3.5 Add the help document.
 
 v0.3.4 Add search filter and optimize search logic to support searching by header and main.
 
