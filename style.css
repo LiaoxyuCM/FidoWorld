@@ -18,6 +18,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 10px;
+    transition: .3s;
+    border-radius: 5px;
+}
+.paragraph:hover {
+    background-color: #FCC;
 }
 #search, #searchButton, #searchType, #create, .container .text, button.sort {
     font: small-caps 20px 'Quicksand', sans-serif;
@@ -237,5 +242,8 @@ button.sort {
     }
     #addToFirstLine:checked + span {
         background-color: #090;
+    }
+    .paragraph:hover {
+        background-color: #322;
     }
 }
