@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-* {
-    font-family: 'Quicksand', sans-serif;
-}
-body {
-    background-color: #f4f4f4;
-}
+* { font-family: 'Quicksand', sans-serif; }
+body { background-color: #f4f4f4; }
 #title {
     text-align: center;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
@@ -20,9 +16,7 @@ body {
     padding: 10px;
     border-radius: 5px;
 }
-.paragraph:hover {
-    background-color: #FCC;
-}
+.paragraph:hover { background-color: #FCC; }
 #search, #searchButton, #searchType, #create, .container .text, button.sort {
     font: small-caps 20px 'Quicksand', sans-serif;
     color: #333;
@@ -31,9 +25,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.paragraph h2 {
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
-}
+.paragraph h2 { text-shadow: 4px 4px 4px rgba(0, 0, 0, .2); }
 .paragraph .text b, strong { color: #900; }
 .paragraph .text i, em { color: #00B; }
 .paragraph .text u { color: #090; }
@@ -42,9 +34,7 @@ body {
     color: #a0f;
     text-decoration: none;
 }
-.paragraph .text a:hover {
-    text-decoration: underline;
-}
+.paragraph .text a:hover { text-decoration: underline; }
 .paragraph .text * {
     background-color: transparent;
     text-shadow: none;
@@ -75,9 +65,7 @@ body {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
     cursor: pointer;
 }
-.paragraph .text input[type="reset"] {
-    background-color: #fbb;
-}
+.paragraph .text input[type="reset"] { background-color: #fbb; }
 #create {
     float: right;
     border-radius: 20px;
@@ -89,15 +77,9 @@ body {
     border: none;
     transition: .1s all ease-in-out;
 }
-#searchButton:hover, #create:hover {
-    cursor: pointer;
-}
-#searchButton:active, #create:active, #searchType:active {
-    box-shadow: none;
-}
-#search {
-    font-variant: normal;
-}
+#searchButton:hover, #create:hover { cursor: pointer; }
+#searchButton:active, #create:active, #searchType:active { box-shadow: none; }
+#search { font-variant: normal; }
 .popup {
     position: fixed;
     top: 50%;
@@ -119,18 +101,10 @@ body {
     font-size: 1.2em;
     background-color: #fff;
 }
-.popup input, .popup textarea {
-    background-color: #f4f4f4;
-}
-.popup button {
-    cursor: pointer;
-}
-.popup button#submit {
-    background-color: #ccf;
-}
-.popup button#close {
-    background-color: #fcc;
-}
+.popup input, .popup textarea { background-color: #f4f4f4; }
+.popup button { cursor: pointer; }
+.popup button#submit { background-color: #ccf; }
+.popup button#close { background-color: #fcc; }
 .popup textarea {
     width: 500px;
     height: 250px;
@@ -145,9 +119,7 @@ body {
     font-size: 12px;
     margin: 0;
 }
-.popup label.check {
-    padding: 0;
-}
+.popup label.check { padding: 0; }
 .popup label.check span {
     margin: 0;
     padding: 0;
@@ -159,15 +131,9 @@ body {
     border-radius: 5px;
     transition: 0.3s;
 }
-#addToFirstLine {
-    display: none;
-}
-#addToFirstLine:checked + span {
-    background-color: #1A4;
-}
-#addToFirstLine:not(:checked) + span svg {
-    display: none;
-}
+#addToFirstLine { display: none; }
+#addToFirstLine:checked + span { background-color: #1A4; }
+#addToFirstLine:not(:checked) + span svg { display: none; }
 .paragraph .delete {
     float: right;
     background: #f44336 !important;
@@ -187,9 +153,7 @@ button.sort {
     transform: translate(-100%, -80%);
 }
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #222;
-    }
+    body { background-color: #222; }
     #search, #searchButton, #searchType, #create, .paragraph .text, button.sort {
         color: #FFF;
         background-color: #333;
@@ -206,9 +170,7 @@ button.sort {
         color: #f7f;
         text-decoration: none;
     }
-    .paragraph .text code {
-        background-color: #444;
-    }
+    .paragraph .text code { background-color: #444; }
     .popup {
         background-color: #222;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
@@ -233,16 +195,10 @@ button.sort {
         color: #FFF;
         background-color: #222;
     }
-    #popuphint {
-        background-color: #222;
-    }
+    #popuphint { background-color: #222; }
     .popup label.check span {
         background-color: #666;
     }
-    #addToFirstLine:checked + span {
-        background-color: #090;
-    }
-    .paragraph:hover {
-        background-color: #322;
-    }
+    #addToFirstLine:checked + span { background-color: #090; }
+    .paragraph:hover { background-color: #322; }
 }

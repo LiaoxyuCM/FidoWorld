@@ -6,19 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         paragraphs.forEach(paragraph => {
             let text = '';
-            if (searchType === 'header') {
-                text = paragraph.querySelector('h2').textContent.toLowerCase();
-            } else if (searchType === 'main') {
-                text = paragraph.querySelector('.text').textContent.toLowerCase();
-            } else {
-                text = paragraph.textContent.toLowerCase();
-            };
+            if (searchType === 'header') { text = paragraph.querySelector('h2').textContent.toLowerCase(); }
+            else if (searchType === 'main') { text = paragraph.querySelector('.text').textContent.toLowerCase(); }
+            else { text = paragraph.textContent.toLowerCase(); };
 
-            if (text.includes(keyword)) {
-                paragraph.style.display = 'block';
-            } else {
-                paragraph.style.display = 'none';
-            };
+            if (text.includes(keyword)) { paragraph.style.display = 'block'; }
+            else { paragraph.style.display = 'none'; };
         });
     });
     document.getElementById('create').addEventListener('click', () => {
@@ -86,9 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(sortButton);
     sortButton.addEventListener('click', () => {
         if (!sort) {
-            sort = new Sortable(container, {
-                animation: 150
-            });
+            sort = new Sortable(container, { animation: 150 });
             sortButton.textContent = 'Complete';
         } else {
             sort.destroy();
