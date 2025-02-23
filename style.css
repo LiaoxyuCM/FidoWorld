@@ -196,9 +196,7 @@ button.sort {
         background-color: #222;
     }
     #popuphint { background-color: #222; }
-    .popup label.check span {
-        background-color: #666;
-    }
+    .popup label.check span { background-color: #666; }
     #addToFirstLine:checked + span { background-color: #090; }
     .paragraph:hover { background-color: #322; }
 }

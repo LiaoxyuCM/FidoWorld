@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.getElementById('create').addEventListener('click', () => {
         const popup = document.createElement('div');
-        popup.className = "popup"
+        popup.className = "popup";
         document.querySelector('#create').style.display = 'none';
         popup.innerHTML = `
             <h3 id="popupheader">New paragraph</h3>
