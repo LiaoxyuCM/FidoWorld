@@ -8,7 +8,9 @@ Little list box
 
 ## Version info
 
-v0.3.6 \[Latest\] Update the help doc.
+v0.3.7 \[Latest\] Update the style with popup "New paragraph"
+
+v0.3.6 Update the help doc.
 
 v0.3.5 Add the help document.
 
