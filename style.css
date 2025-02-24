@@ -93,7 +93,6 @@ body { background-color: #f4f4f4; }
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .popup label, .popup input, .popup button, .popup textarea {
-    display: block;
     border: none;
     padding: 10px;
     border-radius: 5px;
