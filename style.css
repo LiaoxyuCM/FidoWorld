@@ -82,6 +82,8 @@ body { background-color: #f4f4f4; }
 #search { font-variant: normal; }
 .popup {
     position: fixed;
+    display: flex;
+    justify-content: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -110,7 +112,6 @@ body { background-color: #f4f4f4; }
     height: 250px;
 }
 #popupheader {
-    text-align: center;
     background-color: #fff;
 }
 #popuphint {
