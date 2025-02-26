@@ -20,10 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#create').style.display = 'none';
         popup.innerHTML = `
             <h3 id="popupheader">New paragraph</h3>
-            <label for="header">Header:</label>
-            <input type="text" id="header"><br>
-            <label for="main">Main:</label>
-            <textarea id="main" placeholder="Valid markdown, edit markdown here!"></textarea><br>
+            <input type="text" id="header" placeholder="Title"><br>
+            <textarea id="main" placeholder="Main"></textarea><br>
+            <div class="opt-mkd"><input type="checkbox"/> Markdown</div>
             <button id="submit">Submit</button>
             <button id="close">Close</button>
             <br>
@@ -41,8 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const paragraph = document.createElement('div');
             paragraph.className = 'paragraph';
 
-            const containers = document.querySelector(".container")
-            
+            const containers = document.querySelector(".container");
+            const markdownCheckbox = popup.querySelector(".opt-mkd input[type=\"checkbox\"]");
+
             const firstChild = containers.firstChild;
             containers.insertBefore(paragraph, firstChild);
 
@@ -54,7 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const main = document.createElement('div');
             main.className = 'text';
-            main.innerHTML = marked.parse(mainText); // Use a Markdown parser like marked.js
+            
+            if (markdownCheckbox.checked){main.innerHTML = marked.parse(mainText); /* Use a Markdown parser like marked.js */}
+            else {
+                const text = document.createElement("p");
+                text.innerText = mainText;
+                main.appendChild(text);
+            };
 
             paragraph.appendChild(header);
             paragraph.appendChild(main);

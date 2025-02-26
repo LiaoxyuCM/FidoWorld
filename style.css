@@ -91,16 +91,16 @@ body { background-color: #f4f4f4; }
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.popup label, .popup input, .popup button, .popup textarea {
+.popup input#header {
+    margin-bottom: 5px;
+    width: 300px;
+}
+.popup input#header, .popup button, .popup textarea {
     border: none;
     padding: 10px;
     border-radius: 5px;
 }
-.popup label {
-    font-size: 1.2em;
-    background-color: #fff;
-}
-.popup input, .popup textarea { background-color: #f4f4f4; }
+.popup input#header, .popup textarea { background-color: #f4f4f4; }
 .popup button { cursor: pointer; }
 .popup button#submit { background-color: #ccf; }
 .popup button#close { background-color: #fcc; }
@@ -117,18 +117,6 @@ body { background-color: #f4f4f4; }
     background-color: #fff;
     font-size: 12px;
     margin: 0;
-}
-.popup label.check { padding: 0; }
-.popup label.check span {
-    margin: 0;
-    padding: 0;
-    border: none;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-color: #888;
-    border-radius: 5px;
-    transition: 0.3s;
 }
 #addToFirstLine { display: none; }
 #addToFirstLine:checked + span { background-color: #1A4; }
@@ -174,12 +162,8 @@ button.sort {
         background-color: #222;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
-    .popup input, .popup button, .popup textarea {
+    .popup input#header, .popup button, .popup textarea {
         background-color: #333;
-        color: #FFF;
-    }
-    .popup label {
-        background-color: #222;
         color: #FFF;
     }
     .popup button#submit {
@@ -195,7 +179,7 @@ button.sort {
         background-color: #222;
     }
     #popuphint { background-color: #222; }
-    .popup label.check span { background-color: #666; }
     #addToFirstLine:checked + span { background-color: #090; }
     .paragraph:hover { background-color: #322; }
+    .popup .opt-mkd { color: #FFF; }
 }
