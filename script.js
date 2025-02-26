@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#create').style.display = 'none';
         popup.innerHTML = `
             <h3 id="popupheader">New paragraph</h3>
-            <input type="text" id="header" placeholder="Title"><br>
+            <input type="text" id="header" placeholder="Header"><br>
             <textarea id="main" placeholder="Main"></textarea><br>
-            <div class="opt-mkd"><input type="checkbox"/> Markdown</div>
+            <div class="opt-mkd"><input type="checkbox"/> Markdown at main</div>
             <button id="submit">Submit</button>
             <button id="close">Close</button>
             <br>
