@@ -57,3 +57,9 @@ v0.1.3 Change tag "p" to "div" when class="text" *(Excerpt from commit message)*
 v0.1.2 Deleted some paragraphs because FidoWorld should be concise.
 
 v0.1.1 Add more styles.
+
+## Thanks
+
+1. GitHub Copilot and Deepseek - Gave me some codes
+2. Every contributors in GitHub organization "markedjs" - Gave me a Markdown parser API
+3. Every contributors in GitHub organization "SortableJS" - Gave me a sort API
