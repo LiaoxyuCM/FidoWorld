@@ -40,7 +40,7 @@ v0.2.2 Reconstruct index.html and script.js, and **add the function of inserting
 
 v0.2.1.2 Delete error catcher
 
-v0.2.1.1 <del>Add error catcher: When FidoWorld catched error, it will show error</del>
+v0.2.1.1 ~~Add error catcher: When FidoWorld catched error, it will show error~~
 
 v0.2.1 Add more dark styles *(Excerpt from commit message)*
 
