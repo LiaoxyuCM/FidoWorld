@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 id="popupheader">New paragraph</h3>
             <input type="text" id="header" placeholder="Header"><br>
             <textarea id="main" placeholder="Main"></textarea><br>
-            <div class="opt-mkd"><input type="checkbox"/> Markdown at main</div>
+            <div class="opt">
+                <div class="mkd"><input type="checkbox"/> Markdown at main</div>
+            </div>
             <button id="submit">Submit</button>
             <button id="close">Close</button><br>
             <p id="popuphint">It always add to first line.</p>
@@ -61,9 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const paragraph = document.createElement('div');
             paragraph.className = 'paragraph';
 
-            /* Get container and markdown check box */
+            /* Get container and options check box */
             const containers = document.querySelector(".container");
-            const markdownCheckbox = popup.querySelector(".opt-mkd input[type=\"checkbox\"]");
+            const options = [
+                popup.querySelector(".opt .mkd input[type=\"checkbox\"]")
+            ];
 
             /* Get first paragraph of the container and insert a new paragraph before it */
             const firstChild = containers.firstChild;
@@ -80,9 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const main = document.createElement('div');
             main.className = 'text';
             
-            /* If markdown check box is checked, use a Markdown parser liked marked.js
-               Else, just be a plain text */
-            if (markdownCheckbox.checked) {main.innerHTML = marked.parse(mainText); }
+            /* Handle selections */
+            if (options[0].checked) {main.innerHTML = marked.parse(mainText); }
             else {
                 const text = document.createElement("p");
                 text.innerText = mainText;

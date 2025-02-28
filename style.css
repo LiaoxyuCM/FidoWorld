@@ -181,5 +181,5 @@ button.sort {
     #popuphint { background-color: #222; }
     #addToFirstLine:checked + span { background-color: #090; }
     .paragraph:hover { background-color: #322; }
-    .popup .opt-mkd { color: #FFF; }
+    .popup .opt { color: #FFF; }
 }
