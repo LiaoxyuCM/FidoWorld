@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /* Every paragraphs should run this */
         paragraphs.forEach(paragraph => {
-
             /*
                 Get their text content:
                 Something just get header,
@@ -33,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* When "New paragraph" button is clicked */
     document.getElementById('create').addEventListener('click', () => {
-
         /* Show popup */
         const popup = document.createElement('div');
         popup.className = "popup";
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <input type="text" id="header" placeholder="Header"><br>
             <textarea id="main" placeholder="Main"></textarea><br>
             <div class="opt">
-                <div class="mkd"><input type="checkbox"/> Markdown at main</div>
+                <div class="mkd"><input type="checkbox" name="opt-mkd"/> Markdown at main</div>
             </div>
             <button id="submit">Submit</button>
             <button id="close">Close</button><br>
@@ -51,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         document.body.appendChild(popup);
 
+        /* Close the popup */
         document.getElementById('close').addEventListener('click', () => {
             document.body.removeChild(popup);
             document.querySelector('#create').style.display = 'block';
@@ -99,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             /* Remove popup */
             document.body.removeChild(popup);
             document.querySelector('#create').style.display = 'block';
-            
+             
             /* Add delete button: When user want to delete it, just click the button */
             const deleteBtn = document.createElement('button');
             deleteBtn.className = 'delete';

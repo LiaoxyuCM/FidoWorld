@@ -6,6 +6,7 @@ body { background-color: #f4f4f4; }
     text-align: center;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
 }
+.menu { transition: .1s all ease-in-out; }
 .container {
     margin: 0;
     padding: 0;
@@ -16,7 +17,7 @@ body { background-color: #f4f4f4; }
     padding: 10px;
     border-radius: 5px;
 }
-.paragraph:hover { background-color: #FCC; }
+.paragraph:hover { background-color: #FDD; }
 #search, #searchButton, #searchType, #create, .container .text, button.sort {
     font: small-caps 20px 'Quicksand', sans-serif;
     color: #333;
@@ -73,10 +74,7 @@ body { background-color: #f4f4f4; }
     margin: 0;
     padding: 10px 20px;
 }
-#search, #searchButton, #create, #searchType {
-    border: none;
-    transition: .1s all ease-in-out;
-}
+#search, #searchButton, #create, #searchType { border: none; }
 #searchButton:hover, #create:hover { cursor: pointer; }
 #searchButton:active, #create:active, #searchType:active { box-shadow: none; }
 #search { font-variant: normal; }
