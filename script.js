@@ -41,11 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <input type="text" id="header" placeholder="Header"><br>
             <textarea id="main" placeholder="Main"></textarea><br>
             <div class="opt">
-                <div class="mkd"><input type="checkbox" name="opt-mkd"/> Markdown at main</div>
+                <div class="mkd"><input type="checkbox" name="opt-mkd" checked/> Enable Markdown</div>
+                <div class="HTMLPreview"><input type="checkbox" name="opt-HTMLPreview"/> Enable HTML preview (beta)</div>
             </div>
             <button id="submit">Submit</button>
             <button id="close">Close</button><br>
-            <p id="popuphint">It always add to first line.</p>
+            <p id="popuphint">It always add to first line.<br>To enable HTML preview, you should enable Markdown first</p>
         `;
         document.body.appendChild(popup);
 
@@ -65,7 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
             /* Get container and options check box */
             const containers = document.querySelector(".container");
             const options = [
-                popup.querySelector(".opt .mkd input[type=\"checkbox\"]")
+                popup.querySelector(".opt .mkd input[type=\"checkbox\"]"),
+                popup.querySelector(".opt .HTMLPreview input[type=\"checkbox\"]"),
             ];
 
             /* Get first paragraph of the container and insert a new paragraph before it */
@@ -105,6 +107,26 @@ document.addEventListener('DOMContentLoaded', () => {
             deleteBtn.textContent = '-';
             paragraph.appendChild(deleteBtn);
 
+            if (options[1].checked) {
+                /* HTML preview */
+                const htmlPages = paragraph.querySelectorAll('div.text pre code.language-html');
+                const htmlPreview = document.createElement('div');
+                htmlPreview.className = 'html-preview';
+                let cnt = 1;
+                document.body.appendChild(htmlPreview);
+                htmlPages.forEach(page => {
+                    const preview = document.createElement('div');
+                    preview.className = 'preview';
+                    preview.innerHTML = page.innerText;
+                    const previewHint = document.createElement('p');
+                    previewHint.className = 'HTMLPreviewHint';
+                    previewHint.textContent = `HTMLCodeBlock No. ${cnt} Preview`;
+                    paragraph.appendChild(previewHint);
+                    paragraph.appendChild(preview);
+                    cnt += 1;
+                });
+            };
+
             /* When user clicked the button */
             deleteBtn.addEventListener('click', () => {
                 /* Remove paragraph */
@@ -129,4 +151,5 @@ document.addEventListener('DOMContentLoaded', () => {
             sortButton.textContent = 'Sort';
         };
     });
+
 });

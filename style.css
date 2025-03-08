@@ -18,7 +18,7 @@ body { background-color: #f4f4f4; }
     border-radius: 5px;
 }
 .paragraph:hover { background-color: #FDD; }
-#search, #searchButton, #searchType, #create, .container .text, button.sort {
+#search, #searchButton, #searchType, #create, .paragraph .text, .paragraph .preview, button.sort {
     font: small-caps 20px 'Quicksand', sans-serif;
     color: #333;
     background-color: #fff;
@@ -139,7 +139,7 @@ button.sort {
 }
 @media (prefers-color-scheme: dark) {
     body { background-color: #222; }
-    #search, #searchButton, #searchType, #create, .paragraph .text, button.sort {
+    #search, #searchButton, #searchType, #create, .paragraph .text, .paragraph .preview, button.sort {
         color: #FFF;
         background-color: #333;
     }
@@ -179,5 +179,5 @@ button.sort {
     #popuphint { background-color: #222; }
     #addToFirstLine:checked + span { background-color: #090; }
     .paragraph:hover { background-color: #322; }
-    .popup .opt { color: #FFF; }
+    .popup .opt, .paragraph .HTMLPreviewHint { color: #FFF; }
 }
