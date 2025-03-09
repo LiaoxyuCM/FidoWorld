@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const popup = document.createElement('div');
                 popup.className = "popup";
                 editBtn.style.display = 'none';
-                deleteBtn.style..display = 'none';
+                deleteBtn.style.display = 'none';
                 popup.innerHTML = `
                     <h3 id="popupheader">Edit paragraph</h3>
                     <input type="text" id="header" placeholder="Header" value="${headerText}"><br>
