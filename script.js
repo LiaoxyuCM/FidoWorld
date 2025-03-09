@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const popup = document.createElement('div');
                 popup.className = "popup";
                 editBtn.style.display = 'none';
+                deleteBtn.style..display = 'none';
                 popup.innerHTML = `
                     <h3 id="popupheader">Edit paragraph</h3>
                     <input type="text" id="header" placeholder="Header" value="${headerText}"><br>
@@ -158,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('close').addEventListener('click', () => {
                     document.body.removeChild(popup);
                     editBtn.style.display = 'block';
+                    deleteBtn.style.display = 'block';
                 });
 
                 /* If clicked submit */
@@ -182,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     /* Attach header element and main element to the paragraph */
                     header.textContent = headerText;
                     editBtn.style.display = 'block';
+                    deleteBtn.style.display = 'block';
                     
                     /* Remove the last html preview */
                     const previewHintsWillRemove = paragraph.querySelectorAll('.HTMLPreviewHint');
@@ -223,8 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             /* When user clicked the button */
             deleteBtn.addEventListener('click', () => {
-                /* Remove paragraph */
-                paragraph.remove();
+                if (confirm('Are you sure?')) {
+                    /* Remove paragraph */
+                    paragraph.remove();
+                };
             });
         });
     });
