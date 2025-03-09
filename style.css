@@ -100,7 +100,7 @@ body { background-color: #f4f4f4; }
 }
 .popup input#header, .popup textarea { background-color: #f4f4f4; }
 .popup button { cursor: pointer; }
-.popup button#submit { background-color: #ccf; }
+.popup button#submit, .popup button#submitEdit { background-color: #ccf; }
 .popup button#close { background-color: #fcc; }
 .popup textarea {
     width: 500px;
@@ -119,17 +119,18 @@ body { background-color: #f4f4f4; }
 #addToFirstLine { display: none; }
 #addToFirstLine:checked + span { background-color: #1A4; }
 #addToFirstLine:not(:checked) + span svg { display: none; }
-.paragraph .delete {
+.paragraph .delete, .paragraph .edit {
     float: right;
-    background: #f44336 !important;
-    width: 30px;
+    width: 50px;
     height: 30px;
     border: none;
-    border-radius: 50%;
-    color: white;
+    border-radius: 15px;
+    color: black;
     cursor: pointer;
     margin-top: -10px;
 }
+.paragraph .delete { background: #f3a6a0 !important; }
+.paragraph .edit { background: #a2c7a4 !important; }
 button.sort {
     border: none;
     position: fixed;
@@ -164,7 +165,7 @@ button.sort {
         background-color: #333;
         color: #FFF;
     }
-    .popup button#submit {
+    .popup button#submit, .popup button#submitEdit {
         color: #FFF;
         background-color: #228;
     }
@@ -180,4 +181,7 @@ button.sort {
     #addToFirstLine:checked + span { background-color: #090; }
     .paragraph:hover { background-color: #322; }
     .popup .opt, .paragraph .HTMLPreviewHint { color: #FFF; }
+    .paragraph .delete { background: #801f18 !important; }
+    .paragraph .edit { background: #105c14 !important; }
+    .paragraph .delete, .paragraph .edit { color: white; }
 }

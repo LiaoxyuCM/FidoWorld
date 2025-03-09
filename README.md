@@ -8,7 +8,9 @@ Little list box
 
 ## Version info
 
-v0.4.1 \[Latest\] Update documents and scripts, add HTML preview function, and optimize Markdown option.
+v0.5.0 \[Latest\] Add editing function, allowing users to modify paragraph contents and update styles to support new buttons.
+
+v0.4.1 Update documents and scripts, add HTML preview function, and optimize Markdown option.
 
 v0.4.0 Optimize the document structure, update the pop-up window style, and add Markdown option.
 
