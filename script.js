@@ -1,4 +1,4 @@
-/* FidoWorld Scripts */
+/* FDW Scripts */
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -251,4 +251,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     });
 
+    /* SearchButton style */
+    const darkMode = (() => {return window.matchMedia('(prefers-color-scheme: dark)').matches});
+    const searchButton = document.querySelector('.menu #searchButton');
+    searchButton.innerHTML = `<img src="./img/searchButton${darkMode() ? "Dark" : "Light" }Mode.svg" alt="Search"/>`
+    window.matchMedia('(prefers-color-scheme: dark)').onchange = (() => {searchButton.innerHTML = `<img src="./img/searchButton${darkMode() ? "Dark" : "Light" }Mode.svg" alt="Search"/>`});
 });
