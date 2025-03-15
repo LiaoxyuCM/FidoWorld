@@ -18,7 +18,7 @@ body { background-color: #f4f4f4; }
     border-radius: 5px;
 }
 .paragraph:hover { background-color: #FDD; }
-#search, #searchButton, #searchType, #create, .paragraph .text, .paragraph .preview, button.sort {
+#search, #searchType, #create, .paragraph .text, .paragraph .preview, button.sort {
     font: small-caps 20px 'Quicksand', sans-serif;
     color: #333;
     background-color: #fff;
@@ -74,10 +74,26 @@ body { background-color: #f4f4f4; }
     margin: 0;
     padding: 10px 20px;
 }
-#search, #searchButton, #create, #searchType { border: none; }
-#searchButton:hover, #create:hover { cursor: pointer; }
-#searchButton:active, #create:active, #searchType:active { box-shadow: none; }
+#search, #create, #searchType { border: none; }
+#create:hover { cursor: pointer; }
+#create:active, #searchType:active { box-shadow: none; }
 #search { font-variant: normal; }
+#search:hover {
+    animation: searchHover .8s;
+    width: 800px;
+}
+#search:not(:hover) {
+    animation: searchNotHover .8s;
+    width: 253px;
+}
+@keyframes searchHover {
+    0% { width: 253px; }
+    100% { width: 800px; }
+}
+@keyframes searchNotHover {
+    0% { width: 800px; }
+    100% { width: 253px; }
+}
 .popup {
     position: fixed;
     top: 50%;
@@ -140,7 +156,7 @@ button.sort {
 }
 @media (prefers-color-scheme: dark) {
     body { background-color: #222; }
-    #search, #searchButton, #searchType, #create, .paragraph .text, .paragraph .preview, button.sort {
+    #search, #searchType, #create, .paragraph .text, .paragraph .preview, button.sort {
         color: #FFF;
         background-color: #333;
     }

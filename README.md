@@ -8,7 +8,9 @@ Little list box
 
 ## Version info
 
-v0.5.0 \[Latest\] Add editing function, allowing users to modify paragraph contents and update styles to support new buttons.
+v0.5.1 \[Latest\] More animation and valid "press Enter to search".
+
+v0.5.0 Add editing function, allowing users to modify paragraph contents and update styles to support new buttons.
 
 v0.4.1 Update documents and scripts, add HTML preview function, and optimize Markdown option.
 

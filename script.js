@@ -1,33 +1,36 @@
 /* FDW Scripts */
 
 document.addEventListener('DOMContentLoaded', () => {
+    /* Global vars */
+    const container = document.querySelector(".container");
 
-    /* When search button is clicked */
-    document.getElementById('searchButton').addEventListener('click', () => {
+    /* When pressed enter */
+    document.getElementById('search').addEventListener('keyup', (event) => {
+        if (event.keyCode === 13) {
+            /* Get keyword, search filter and every paragraphs */
+            const keyword = document.getElementById('search').value.toLowerCase();
+            const paragraphs = document.querySelectorAll('.paragraph');
+            const searchType = document.getElementById('searchType').value;
 
-        /* Get keyword, search filter and every paragraphs */
-        const keyword = document.getElementById('search').value.toLowerCase();
-        const paragraphs = document.querySelectorAll('.paragraph');
-        const searchType = document.getElementById('searchType').value;
-
-        /* Every paragraphs should run this */
-        paragraphs.forEach(paragraph => {
-            /*
-                Get their text content:
-                Something just get header,
-                something just get main,
-                something must get all text contents.
-                This is determined by the search filter.
-            */
-            let text = '';
-            if (searchType === 'header') { text = paragraph.querySelector('h2').textContent.toLowerCase(); }
-            else if (searchType === 'main') { text = paragraph.querySelector('.text').textContent.toLowerCase(); }
-            else { text = paragraph.textContent.toLowerCase(); };
-            
-            /* If text content included it, they will show; else, they wil hide. */
-            if (text.includes(keyword)) { paragraph.style.display = 'block'; }
-            else { paragraph.style.display = 'none'; };
-        });
+            /* Every paragraphs should run this */
+            paragraphs.forEach(paragraph => {
+                /*
+                    Get their text content:
+                    Something just get header,
+                    something just get main,
+                    something must get all text contents.
+                    This is determined by the search filter.
+                */
+                let text = '';
+                if (searchType === 'header') { text = paragraph.querySelector('h2').textContent.toLowerCase(); }
+                else if (searchType === 'main') { text = paragraph.querySelector('.text').textContent.toLowerCase(); }
+                else { text = paragraph.textContent.toLowerCase(); };
+                
+                /* If text content included it, they will show; else, they wil hide. */
+                if (text.includes(keyword)) { paragraph.style.display = 'block'; }
+                else { paragraph.style.display = 'none'; };
+            });
+        };
     });
 
     /* When "New paragraph" button is clicked */
@@ -63,16 +66,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const paragraph = document.createElement('div');
             paragraph.className = 'paragraph';
 
-            /* Get container and options check box */
-            const containers = document.querySelector(".container");
+            /* Get options check box */
             let options = [
                 popup.querySelector(".opt .mkd input[type=\"checkbox\"]"),
                 popup.querySelector(".opt .HTMLPreview input[type=\"checkbox\"]"),
             ];
 
             /* Get first paragraph of the container and insert a new paragraph before it */
-            const firstChild = containers.firstChild;
-            containers.insertBefore(paragraph, firstChild);
+            const firstChild = container.firstChild;
+            container.insertBefore(paragraph, firstChild);
 
             /* Get header and main */
             let headerText = document.getElementById('header').value;
@@ -84,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const main = document.createElement('div');
             main.className = 'text';
-            
+
             /* Handle selections */
             if (options[0].checked) {main.innerHTML = marked.parse(mainText); }
             else {
@@ -235,7 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* Sort button */
-    const container = document.querySelector('.container');
     const sortButton = document.querySelector('.sort');
     let sort = undefined;
     document.body.appendChild(sortButton);
@@ -250,10 +251,4 @@ document.addEventListener('DOMContentLoaded', () => {
             sortButton.textContent = 'Sort';
         };
     });
-
-    /* SearchButton style */
-    const darkMode = (() => {return window.matchMedia('(prefers-color-scheme: dark)').matches});
-    const searchButton = document.querySelector('.menu #searchButton');
-    searchButton.innerHTML = `<img src="./img/searchButton${darkMode() ? "Dark" : "Light" }Mode.svg" alt="Search"/>`
-    window.matchMedia('(prefers-color-scheme: dark)').onchange = (() => {searchButton.innerHTML = `<img src="./img/searchButton${darkMode() ? "Dark" : "Light" }Mode.svg" alt="Search"/>`});
 });
