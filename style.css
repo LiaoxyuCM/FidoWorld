@@ -78,11 +78,11 @@ body { background-color: #f4f4f4; }
 #create:hover { cursor: pointer; }
 #create:active, #searchType:active { box-shadow: none; }
 #search { font-variant: normal; }
-#search:hover {
+#search:focus {
     animation: searchHover .8s;
     width: 800px;
 }
-#search:not(:hover) {
+#search:not(:focus) {
     animation: searchNotHover .8s;
     width: 253px;
 }
