@@ -8,7 +8,9 @@ Little list box
 
 ## Version info
 
-v0.5.1 \[Latest\] More animation and valid "press Enter to search".
+v0.5.2 \[Latest\] More animations.
+
+v0.5.1 More animations and valid "press Enter to search".
 
 v0.5.0 Add editing function, allowing users to modify paragraph contents and update styles to support new buttons.
 

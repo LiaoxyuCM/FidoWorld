@@ -80,19 +80,47 @@ body { background-color: #f4f4f4; }
 #search { font-variant: normal; }
 #search:focus {
     animation: searchHover .8s;
-    width: 800px;
+    width: 1500px;
+    transform: translateY(-70px);
 }
 #search:not(:focus) {
     animation: searchNotHover .8s;
     width: 253px;
 }
+#search:focus + #searchType {
+    animation: searchTypeHover .8s;
+    transform: translateX(-1545px);
+}
+#search:not(:focus) + #searchType {
+    animation: searchTypeNotHover .8s;
+}
 @keyframes searchHover {
-    0% { width: 253px; }
-    100% { width: 800px; }
+    0% {
+        width: 253px;
+        transform: translateY(0);
+    }
+    100% {
+        width: 1500px;
+        transform: translateY(-70px);
+    }
 }
 @keyframes searchNotHover {
-    0% { width: 800px; }
-    100% { width: 253px; }
+    0% {
+        width: 1500px;
+        transform: translateY(-70px);
+    }
+    100% {
+        width: 253px;
+        transform: translateY(0);
+    }
+}
+@keyframes searchTypeHover {
+    0% { transform: translateY(0); }
+    100% { transform: translateX(-1545px); }
+}
+@keyframes searchTypeNotHover {
+    0% { transform: translateX(-1545px); }
+    100% { transform: translateY(0); }
 }
 .popup {
     position: fixed;
@@ -108,6 +136,22 @@ body { background-color: #f4f4f4; }
 .popup input#header {
     margin-bottom: 5px;
     width: 300px;
+}
+.popup input#header:focus {
+    animation: popupHeaderHover .8s;
+    width: 500px;
+}
+.popup input#header:not(:focus) {
+    animation: popupHeaderNotHover .8s;
+    width: 300px;
+}
+@keyframes popupHeaderHover {
+    0% { width: 300px; }
+    100% { width: 500px; }
+}
+@keyframes popupHeaderNotHover {
+    0% { width: 500px; }
+    100% { width: 300px; }
 }
 .popup input#header, .popup button, .popup textarea {
     border: none;

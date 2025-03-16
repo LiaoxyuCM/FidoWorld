@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* When pressed enter */
     document.getElementById('search').addEventListener('keyup', (event) => {
-        if (event.keyCode === 13) {
+        if (event.key === 'Enter') {
             /* Get keyword, search filter and every paragraphs */
             const keyword = document.getElementById('search').value.toLowerCase();
             const paragraphs = document.querySelectorAll('.paragraph');
