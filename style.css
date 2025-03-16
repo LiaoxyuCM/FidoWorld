@@ -80,47 +80,33 @@ body { background-color: #f4f4f4; }
 #search { font-variant: normal; }
 #search:focus {
     animation: searchHover .8s;
-    width: 1500px;
+    width: var(--width);
     transform: translateY(-70px);
 }
 #search:not(:focus) {
     animation: searchNotHover .8s;
     width: 253px;
 }
-#search:focus + #searchType {
-    animation: searchTypeHover .8s;
-    transform: translateX(-1545px);
-}
-#search:not(:focus) + #searchType {
-    animation: searchTypeNotHover .8s;
-}
+#search:focus + #searchType { display: none; }
 @keyframes searchHover {
     0% {
         width: 253px;
         transform: translateY(0);
     }
     100% {
-        width: 1500px;
+        width: var(--width);
         transform: translateY(-70px);
     }
 }
 @keyframes searchNotHover {
     0% {
-        width: 1500px;
+        width: var(--width);
         transform: translateY(-70px);
     }
     100% {
         width: 253px;
         transform: translateY(0);
     }
-}
-@keyframes searchTypeHover {
-    0% { transform: translateY(0); }
-    100% { transform: translateX(-1545px); }
-}
-@keyframes searchTypeNotHover {
-    0% { transform: translateX(-1545px); }
-    100% { transform: translateY(0); }
 }
 .popup {
     position: fixed;

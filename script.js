@@ -251,4 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sortButton.textContent = 'Sort';
         };
     });
+
+    /* Animation Set width */
+    document.body.style.setProperty('--width', String(window.innerWidth - 116) + 'px');
 });
