@@ -82,7 +82,6 @@ body { background-color: #f4f4f4; }
 #search:focus {
     animation: searchHover .8s;
     width: var(--width);
-    transform: translateY(-70px);
 }
 #search:not(:focus) {
     animation: searchNotHover .8s;
@@ -90,24 +89,12 @@ body { background-color: #f4f4f4; }
 }
 #search:focus + #searchType { display: none; }
 @keyframes searchHover {
-    0% {
-        width: 253px;
-        transform: translateY(0);
-    }
-    100% {
-        width: var(--width);
-        transform: translateY(-70px);
-    }
+    0% { width: 253px; }
+    100% { width: var(--width); }
 }
 @keyframes searchNotHover {
-    0% {
-        width: var(--width);
-        transform: translateY(-70px);
-    }
-    100% {
-        width: 253px;
-        transform: translateY(0);
-    }
+    0% { width: var(--width); }
+    100% { width: 253px; }
 }
 .popup {
     position: fixed;

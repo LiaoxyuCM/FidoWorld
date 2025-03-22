@@ -253,5 +253,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* Animation Set width */
-    document.body.style.setProperty('--width', String(window.innerWidth - 116) + 'px');
+    setInterval(() => {document.body.style.setProperty('--width', String(window.innerWidth - 298) + 'px')},  10)
 });
