@@ -31,6 +31,7 @@ body { background-color: #f4f4f4; }
 .paragraph .text i, .paragraph .text em { color: #00B; }
 .paragraph .text u, .paragraph .text ins { color: #090; }
 .paragraph .text s, .paragraph .text del { color: #999; }
+.paragraph .text blockquote { margin-left: 40px; }
 .paragraph .text a {
     color: #a0f;
     text-decoration: none;

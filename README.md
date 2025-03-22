@@ -8,7 +8,11 @@ Little list box
 
 ## Version info
 
-v0.5.2 \[Latest\] More animations.
+v0.5.4 \[Latest\] Add support "blockquote"
+
+v0.5.3 More tags support
+
+v0.5.2 More animations.
 
 v0.5.1 More animations and valid "press Enter to search".
 
