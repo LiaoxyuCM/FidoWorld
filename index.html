@@ -12,20 +12,20 @@
 </head>
 <body>
     <h1 id="title">FidoWorld</h1>
-    <div class="menu">
-        <input type="text" id="search" placeholder="Search paragraphs              and press Enter">
+    <nav class="menu"></nav>
+        <input type="text" id="search" placeholder="Search paragraphs and press Enter">
         <select id="searchType">
             <option value="all">Header + main</option>
             <option value="header">Just header</option>
             <option value="main">Just main</option>
         </select>
         <button id="create">+</button>
-    </div>
+    </nav>
     <noscript>
-        <h3 style="color: #F00;">Warn: You should enable JavaScript to searth, add, drag and so on</h3>
+        <h3 style="color: #F00;">Warn: You should enable JavaScript to search, add, drag and so on</h3>
     </noscript>
-    <div class="container">
-        <div class="paragraph">
+    <section class="container">
+        <article class="paragraph">
             <h2>About FidoWorld</h2>
             <div class="text">
                 <p>
@@ -35,8 +35,8 @@
                     <br><a href="doc.html">Get help</a>
                 </p>
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
     <button class="sort">Sort</button>
 </body>
 </html>

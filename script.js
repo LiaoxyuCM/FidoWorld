@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('submit').addEventListener('click', () => {
 
             /* Create a new paragraph */
-            const paragraph = document.createElement('div');
+            const paragraph = document.createElement('article');
             paragraph.className = 'paragraph';
 
             /* Get options check box */
