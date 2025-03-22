@@ -27,10 +27,10 @@ body { background-color: #f4f4f4; }
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .paragraph h2 { text-shadow: 4px 4px 4px rgba(0, 0, 0, .2); }
-.paragraph .text b, strong { color: #900; }
-.paragraph .text i, em { color: #00B; }
-.paragraph .text u { color: #090; }
-.paragraph .text del { color: #999; }
+.paragraph .text b, .paragraph .text strong { color: #900; }
+.paragraph .text i, .paragraph .text em { color: #00B; }
+.paragraph .text u, .paragraph .text ins { color: #090; }
+.paragraph .text s, .paragraph .text del { color: #999; }
 .paragraph .text a {
     color: #a0f;
     text-decoration: none;
