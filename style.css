@@ -87,7 +87,6 @@ body { background-color: #f4f4f4; }
     animation: searchNotHover .8s;
     width: 253px;
 }
-#search:focus + #searchType { display: none; }
 @keyframes searchHover {
     0% { width: 253px; }
     100% { width: var(--width); }
