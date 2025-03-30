@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 else if (searchType === 'main') { text = paragraph.querySelector('.text').textContent.toLowerCase(); }
                 else { text = paragraph.textContent.toLowerCase(); };
                 
-                /* If text content included it, they will show; else, they wil hide. */
+                /* If text content included it, they will show; else, they will hide. */
                 if (text.includes(keyword)) { paragraph.style.display = 'block'; }
                 else { paragraph.style.display = 'none'; };
             });
