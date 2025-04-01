@@ -11,33 +11,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector(".container");
 
     /* When pressed enter */
-    document.getElementById('search').addEventListener('keyup', (event) => {
-        if (event.key === 'Enter') {
-            /* Get keyword, search filter and every paragraphs */
-            const keyword = document.getElementById('search').value.toLowerCase();
-            const paragraphs = document.querySelectorAll('.paragraph');
-            const searchType = document.getElementById('searchType').value;
+    if (document.getElementById('search')) {
+        document.getElementById('search').addEventListener('keyup', (event) => {
+            if (event.key === 'Enter') {
+                /* Get keyword, search filter and every paragraphs */
+                const keyword = document.getElementById('search').value.toLowerCase();
+                const paragraphs = document.querySelectorAll('.paragraph');
+                const searchType = document.getElementById('searchType').value;
 
-            /* Every paragraphs should run this */
-            paragraphs.forEach(paragraph => {
-                /*
-                    Get their text content:
-                    Something just get header,
-                    something just get main,
-                    something must get all text contents.
-                    This is determined by the search filter.
-                */
-                let text = '';
-                if (searchType === 'header') { text = paragraph.querySelector('h2').textContent.toLowerCase(); }
-                else if (searchType === 'main') { text = paragraph.querySelector('.text').textContent.toLowerCase(); }
-                else { text = paragraph.textContent.toLowerCase(); };
-                
-                /* If text content included it, they will show; else, they will hide. */
-                if (text.includes(keyword)) { paragraph.style.display = 'block'; }
-                else { paragraph.style.display = 'none'; };
-            });
-        };
-    });
+                /* Every paragraphs should run this */
+                paragraphs.forEach(paragraph => {
+                    /*
+                        Get their text content:
+                        Something just get header,
+                        something just get main,
+                        something must get all text contents.
+                        This is determined by the search filter.
+                    */
+                    let text = '';
+                    if (searchType === 'header') { text = paragraph.querySelector('h2').textContent.toLowerCase(); }
+                    else if (searchType === 'main') { text = paragraph.querySelector('.text').textContent.toLowerCase(); }
+                    else { text = paragraph.textContent.toLowerCase(); };
+                    
+                    /* If text content included it, they will show; else, they will hide. */
+                    if (text.includes(keyword)) { paragraph.style.display = 'block'; }
+                    else { paragraph.style.display = 'none'; };
+                });
+            };
+        });
+    };
 
     /* When "New paragraph" button is clicked */
     if (document.getElementById('create')) {
