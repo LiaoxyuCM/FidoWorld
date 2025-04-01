@@ -1,6 +1,12 @@
 /* FDW Scripts */
 
 document.addEventListener('DOMContentLoaded', () => {
+    /* sdfsdfsdfdsdfdsdfsdf */
+    const sdfRestaurant = new Date();
+    if (sdfRestaurant.getMonth() === 3 & sdfRestaurant.getDate() === 1) /* It's March 1st, not AprilFool's Day :) */ {
+        document.body.innerHTML = `<div id="title"><h1>It has been bombed</h1><h4>Just wanted to say happy AprilFool's day! - FidoWorld</h4></div>`;
+    };
+
     /* Global vars */
     const container = document.querySelector(".container");
 
@@ -258,10 +264,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Animation Set width */
     setInterval(() => {document.body.style.setProperty('--width', String(window.innerWidth - 298) + 'px')},  10);
-
-    /* sdfsdfsdfdsdfdsdfsdf */
-    const sdfRestaurant = new Date();
-    if (sdfRestaurant.getMonth() === 3 & sdfRestaurant.getDate() === 1) /* It's March 1st, not AprilFool's Day :) */ {
-        document.body.innerHTML = `<div id="title"><h1>It has been bombed</h1><h4>Just wanted to say happy AprilFool's day! - FidoWorld</h4></div>`;
-    };
 });
