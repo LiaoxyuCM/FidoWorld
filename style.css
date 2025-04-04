@@ -1,7 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
-* { font-family: 'Quicksand', sans-serif; }
-body { background-color: #f4f4f4; }
+* {
+    font-family: 'Quicksand', sans-serif;
+    /* Colors */
+    --bg-light: #f4f4f4;
+    --bg-dark: #222;
+    --p-bg-light: #FFF;
+    --p-bg-dark: #333;
+    --p-hover-light-red: #FDD;
+    --p-hover-dark-red: #322;
+    --p-button: #bbf;
+    --p-del-light: #f3a6a0;
+    --p-del-dark: #801f18;
+    --p-ed-light: #a2c7a4;
+    --p-ed-dark: #105c14;
+    --normal-font-color-light: #333;
+    --normal-font-color-dark: #FFF;
+    --b-font-color-light: #900;
+    --b-font-color-dark: #f88;
+    --i-font-color-light: #00B;
+    --i-font-color-dark: #88f;
+    --u-font-color-light: #090;
+    --u-font-color-dark: #8f8;
+    --d-font-color-light: #999;
+    --d-font-color-dark: #666;
+    --a-font-color-light: #a0f;
+    --a-font-color-dark: #f7f;
+    --pp-hint: #aaa;
+    --pp-b-submit-light: #ccf;
+    --pp-b-submit-dark: #228;
+    --pp-b-close-light: #fcc;
+    --pp-b-close-dark: #822;
+    --pp-input-dark: #333;
+    --title-dark: #FFF;
+    --code-color-dark: #444;
+}
+body { background-color: var(--bg-light); }
 #title {
     text-align: center;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
@@ -17,23 +51,23 @@ body { background-color: #f4f4f4; }
     padding: 10px;
     border-radius: 5px;
 }
-.paragraph:hover { background-color: #FDD; }
+.paragraph:hover { background-color: var(--p-hover-light-red); }
 #search, #searchType, #create, .paragraph .text, .paragraph .preview, button.sort {
     font: small-caps 20px 'Quicksand', sans-serif;
-    color: #333;
-    background-color: #fff;
+    color: var(--normal-font-color-light);
+    background-color: var(--p-bg-light);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .paragraph h2 { text-shadow: 4px 4px 4px rgba(0, 0, 0, .2); }
-.paragraph .text b, .paragraph .text strong { color: #900; }
-.paragraph .text i, .paragraph .text em { color: #00B; }
-.paragraph .text u, .paragraph .text ins { color: #090; }
-.paragraph .text s, .paragraph .text del { color: #999; }
+.paragraph .text b, .paragraph .text strong { color: var(--b-font-color-light); }
+.paragraph .text i, .paragraph .text em { color: var(--i-font-color-light); }
+.paragraph .text u, .paragraph .text ins { color: var(--u-font-color-light); }
+.paragraph .text s, .paragraph .text del { color: var(--d-font-color-light); }
 .paragraph .text blockquote { margin-left: 40px; }
 .paragraph .text a {
-    color: #a0f;
+    color: var(--a-font-color-light);
     text-decoration: none;
 }
 .paragraph .text a:hover { text-decoration: underline; }
@@ -46,14 +80,14 @@ body { background-color: #f4f4f4; }
 }
 .paragraph .text code {
     font-family: '0xProto Nerd Font Mono','Cascadia Mono', 'Consolas', monospace;
-    background-color: #f4f4f4;
+    background-color: var(--bg-light);
     font-variant: normal;
     border-radius: 5px;
 }
 .paragraph .text input[type="text"] {
     border: none;
     border-radius: 5px;
-    background-color: #f4f4f4;
+    background-color: var(--bg-light);
     width: 200px;
 }
 .paragraph .text input[type="button"],
@@ -63,7 +97,7 @@ body { background-color: #f4f4f4; }
     border: none;
     border-radius: 10px;
     height: 50px;
-    background-color: #bbf;
+    background-color: var(--p-button);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .2);
     cursor: pointer;
 }
@@ -131,27 +165,28 @@ body { background-color: #f4f4f4; }
     padding: 10px;
     border-radius: 5px;
 }
-.popup input#header, .popup textarea { background-color: #f4f4f4; }
+.popup input#header, .popup textarea { background-color: var(--bg-light); }
 .popup button { cursor: pointer; }
-.popup button#submit, .popup button#submitEdit { background-color: #ccf; }
-.popup button#close { background-color: #fcc; }
+.popup button#submit, .popup button#submitEdit { background-color: var(--pp-b-submit-light); }
+.popup button#close { background-color: var(--pp-b-close-light); }
 .popup textarea {
     width: 500px;
     height: 250px;
 }
 #popupheader {
-    background-color: #fff;
+    background-color: var(--p-bg-light);
     text-align: center;
 }
 #popuphint {
-    color: #aaa;
-    background-color: #fff;
+    color: var(--pp-hint);
+    background-color: var(--p-bg-light);
     font-size: 12px;
     margin: 0;
 }
-#addToFirstLine { display: none; }
-#addToFirstLine:checked + span { background-color: #1A4; }
-#addToFirstLine:not(:checked) + span svg { display: none; }
+/* #addToFirstLine { display: none; }
+   #addToFirstLine:checked + span { background-color: #1A4; }
+   #addToFirstLine:not(:checked) + span svg { display: none; }
+*/
 .paragraph .delete, .paragraph .edit {
     float: right;
     width: 50px;
@@ -162,8 +197,8 @@ body { background-color: #f4f4f4; }
     cursor: pointer;
     margin-top: -10px;
 }
-.paragraph .delete { background: #f3a6a0 !important; }
-.paragraph .edit { background: #a2c7a4 !important; }
+.paragraph .delete { background: var(--p-del-light) !important; }
+.paragraph .edit { background: var(--p-ed-light) !important; }
 button.sort {
     border: none;
     position: fixed;
@@ -172,49 +207,49 @@ button.sort {
     transform: translate(-100%, -80%);
 }
 @media (prefers-color-scheme: dark) {
-    body { background-color: #222; }
+    body { background-color: var(--bg-dark); }
     #search, #searchType, #create, .paragraph .text, .paragraph .preview, button.sort {
-        color: #FFF;
-        background-color: #333;
+        color: var(--normal-font-color-dark);
+        background-color: var(--p-bg-dark);
     }
     #title, .paragraph h2 {
-        color: #FFF;
+        color: var(--title-dark);
         text-shadow: 4px 4px 4px rgba(255, 255, 255, .2);
     }
-    .paragraph .text b, strong { color: #F88; }
-    .paragraph .text i, em { color: #88F; }
-    .paragraph .text u { color: #8F8; }
-    .paragraph .text del { color: #666; }
+    .paragraph .text b, .paragraph .text strong { color: var(--b-font-color-dark); }
+    .paragraph .text i, .paragraph .text em { color: var(--i-font-color-dark); }
+    .paragraph .text u, .paragraph .text ins { color: var(--u-font-color-dark); }
+    .paragraph .text s, .paragraph .text del { color: var(--d-font-color-dark); }
     .paragraph .text a {
-        color: #f7f;
+        color: var(--a-font-color-dark);
         text-decoration: none;
     }
-    .paragraph .text code { background-color: #444; }
+    .paragraph .text code { background-color: var(--code-color-dark); }
     .popup {
-        background-color: #222;
+        background-color: var(--bg-dark);
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
     .popup input#header, .popup button, .popup textarea {
-        background-color: #333;
-        color: #FFF;
+        background-color: var(--pp-input-dark);
+        color: var(--normal-font-color-dark);
     }
     .popup button#submit, .popup button#submitEdit {
-        color: #FFF;
-        background-color: #228;
+        color: var(--normal-font-color-dark);
+        background-color: var(--pp-b-submit-dark);
     }
-    .popup button#close {
-        color: #FFF;
-        background-color: #822;
+    .popup button#close{
+        color: var(--normal-font-color-dark);
+        background-color: var(--pp-b-close-dark);
     }
     #popupheader {
-        color: #FFF;
-        background-color: #222;
+        color: var(--normal-font-color-dark);
+        background-color: var(--bg-dark);
     }
-    #popuphint { background-color: #222; }
-    #addToFirstLine:checked + span { background-color: #090; }
-    .paragraph:hover { background-color: #322; }
-    .popup .opt, .paragraph .HTMLPreviewHint { color: #FFF; }
-    .paragraph .delete { background: #801f18 !important; }
-    .paragraph .edit { background: #105c14 !important; }
-    .paragraph .delete, .paragraph .edit { color: white; }
+    #popuphint { background-color: var(--bg-dark); }
+    /* #addToFirstLine:checked + span { background-color: #090; } */
+    .paragraph:hover { background-color: var(--p-hover-dark-red); }
+    .popup .opt, .paragraph .HTMLPreviewHint { color: var(--normal-font-color-dark); }
+    .paragraph .delete { background: var(--p-del-dark) !important; }
+    .paragraph .edit { background: var(--p-ed-dark) !important; }
+    .paragraph .delete, .paragraph .edit { color: var(--normal-font-color-dark); }
 }
