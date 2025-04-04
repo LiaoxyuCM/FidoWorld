@@ -3,37 +3,37 @@
 * {
     font-family: 'Quicksand', sans-serif;
     /* Colors */
-    --bg-light: #f4f4f4;
-    --bg-dark: #222;
-    --p-bg-light: #FFF;
-    --p-bg-dark: #333;
-    --p-hover-light-red: #FDD;
-    --p-hover-dark-red: #322;
-    --p-button: #bbf;
-    --p-del-light: #f3a6a0;
-    --p-del-dark: #801f18;
-    --p-ed-light: #a2c7a4;
-    --p-ed-dark: #105c14;
+    --bg-light:                #f4f4f4;
+    --bg-dark:                 #222;
+    --p-bg-light:              #FFF;
+    --p-bg-dark:               #333;
+    --p-hover-light-red:       #FDD;
+    --p-hover-dark-red:        #322;
+    --p-button:                #bbf;
+    --p-del-light:             #f3a6a0;
+    --p-del-dark:              #801f18;
+    --p-ed-light:              #a2c7a4;
+    --p-ed-dark:               #105c14;
     --normal-font-color-light: #333;
-    --normal-font-color-dark: #FFF;
-    --b-font-color-light: #900;
-    --b-font-color-dark: #f88;
-    --i-font-color-light: #00B;
-    --i-font-color-dark: #88f;
-    --u-font-color-light: #090;
-    --u-font-color-dark: #8f8;
-    --d-font-color-light: #999;
-    --d-font-color-dark: #666;
-    --a-font-color-light: #a0f;
-    --a-font-color-dark: #f7f;
-    --pp-hint: #aaa;
-    --pp-b-submit-light: #ccf;
-    --pp-b-submit-dark: #228;
-    --pp-b-close-light: #fcc;
-    --pp-b-close-dark: #822;
-    --pp-input-dark: #333;
-    --title-dark: #FFF;
-    --code-color-dark: #444;
+    --normal-font-color-dark:  #FFF;
+    --b-font-color-light:      #900;
+    --b-font-color-dark:       #f88;
+    --i-font-color-light:      #00B;
+    --i-font-color-dark:       #88f;
+    --u-font-color-light:      #090;
+    --u-font-color-dark:       #8f8;
+    --d-font-color-light:      #999;
+    --d-font-color-dark:       #666;
+    --a-font-color-light:      #a0f;
+    --a-font-color-dark:       #f7f;
+    --pp-hint:                 #aaa;
+    --pp-b-submit-light:       #ccf;
+    --pp-b-submit-dark:        #228;
+    --pp-b-close-light:        #fcc;
+    --pp-b-close-dark:         #822;
+    --pp-input-dark:           #333;
+    --title-dark:              #FFF;
+    --code-color-dark:         #444;
 }
 body { background-color: var(--bg-light); }
 #title {
@@ -183,10 +183,6 @@ body { background-color: var(--bg-light); }
     font-size: 12px;
     margin: 0;
 }
-/* #addToFirstLine { display: none; }
-   #addToFirstLine:checked + span { background-color: #1A4; }
-   #addToFirstLine:not(:checked) + span svg { display: none; }
-*/
 .paragraph .delete, .paragraph .edit {
     float: right;
     width: 50px;
@@ -246,7 +242,6 @@ button.sort {
         background-color: var(--bg-dark);
     }
     #popuphint { background-color: var(--bg-dark); }
-    /* #addToFirstLine:checked + span { background-color: #090; } */
     .paragraph:hover { background-color: var(--p-hover-dark-red); }
     .popup .opt, .paragraph .HTMLPreviewHint { color: var(--normal-font-color-dark); }
     .paragraph .delete { background: var(--p-del-dark) !important; }
