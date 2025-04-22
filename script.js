@@ -4,7 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     /* sdfsdfsdfdsdfdsdfsdf */
     const sdfRestaurant = new Date();
     if (sdfRestaurant.getMonth() === 3 & sdfRestaurant.getDate() === 1) /* It's March 1st, not AprilFool's Day :) */ {
-        document.body.innerHTML = `<div id="title"><h1>It has been bombed</h1><h4>Just wanted to say happy AprilFool's day! - FidoWorld</h4></div>`;
+        document.body.innerHTML = `
+            <div id="title">
+                <h1>FidoWorld</h1>
+                <h4>Unfortunately, we suspended our service because of an error.</h4>
+                <h4>We need suggetions!!!</h4>
+                <h5>Error code: 0x59 0x6F 0x75 0x20 0x66 0x6F 0x6F 0x6C 0x21</h5>
+            </div>
+        `;
     };
 
     /* Global vars */
