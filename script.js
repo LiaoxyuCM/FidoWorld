@@ -25,24 +25,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 const keyword = document.getElementById('search').value.toLowerCase();
                 const paragraphs = document.querySelectorAll('.paragraph');
                 const searchType = document.getElementById('searchType').value;
+                const waysToHideParas = document.getElementById('waysToHideParas').value;
 
                 /* Every paragraphs should run this */
                 paragraphs.forEach(paragraph => {
-                    /*
-                        Get their text content:
-                        Something just get header,
-                        something just get main,
-                        something must get all text contents.
-                        This is determined by the search filter.
-                    */
+                    /* Get their text content */
                     let text = '';
                     if (searchType === 'header') { text = paragraph.querySelector('h2').textContent.toLowerCase(); }
                     else if (searchType === 'main') { text = paragraph.querySelector('.text').textContent.toLowerCase(); }
                     else { text = paragraph.textContent.toLowerCase(); };
                     
+                    
+                    paragraph.style.display = 'block';
+                    paragraph.style.filter = 'none';
                     /* If text content included it, they will show; else, they will hide. */
-                    if (text.includes(keyword)) { paragraph.style.display = 'block'; }
-                    else { paragraph.style.display = 'none'; };
+                    if (text.includes(keyword)) {
+                        paragraph.style.display = 'block';
+                        paragraph.style.filter = 'none';
+                    }
+                    else {
+                        if (waysToHideParas === 'bl') {
+                            paragraph.style.filter = 'blur(5px)';
+                        } else {
+                            paragraph.style.display = 'none';
+                        };
+                    };
                 });
             };
         });

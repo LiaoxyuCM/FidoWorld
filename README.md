@@ -8,6 +8,8 @@ Little list box
 
 ## Version info
 
+v0.5.6 Add more animations.
+
 v0.5.5 \[Latest\] Rename "div" to make more semantic. *\(Github copilot did it\)*
 
 v0.5.4 Add support "blockquote"

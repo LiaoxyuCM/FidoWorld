@@ -14,15 +14,19 @@
     <h1 id="title">FidoWorld</h1>
     <nav class="menu">
         <input type="text" id="search" placeholder="Search paragraphs and press Enter">
-        <select id="searchType">
+        <select class="customSearch" id="searchType">
             <option value="all">Header + main</option>
             <option value="header">Just header</option>
             <option value="main">Just main</option>
         </select>
+        <select class="customSearch" id="waysToHideParas">
+            <option value="hd">Hide</option>
+            <option value="bl">Blur</option>
+        </select>
         <button id="create">+</button>
     </nav>
     <noscript>
-        <h3 style="color: #F00;">Warn: You should enable JavaScript to search, add, drag and so on</h3>
+        <h3 style="color: #FF0;">Warn: You should enable JavaScript to search, add, drag and so on</h3>
     </noscript>
     <section class="container">
         <article class="paragraph">
@@ -30,7 +34,7 @@
             <div class="text">
                 <p>
                     &copy; Copyright <a href="https://github.com/LiaoxyuCM">Liaoxyu (LiaoxyuCM)</a>
-                    <br>Use <b>Apache 2.0 license</b> to open source
+                    <br>License<b>Apache 2.0</b>
                     <br><a href="https://github.com/LiaoxyuCM/FidoWorld">Source code</a>
                     <br><a href="doc.html">Get help</a>
                 </p>

@@ -52,13 +52,17 @@ body { background-color: var(--bg-light); }
     border-radius: 5px;
 }
 .paragraph:hover { background-color: var(--p-hover-light-red); }
-#search, #searchType, #create, .paragraph .text, .paragraph .preview, button.sort {
+#search, .customSearch, #create, .paragraph .text, .paragraph .preview, button.sort {
     font: small-caps 20px 'Quicksand', sans-serif;
     color: var(--normal-font-color-light);
     background-color: var(--p-bg-light);
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.customSearch {
+    padding-left: 0;
+    padding-right: 0;
 }
 .paragraph h2 { text-shadow: 4px 4px 4px rgba(0, 0, 0, .2); }
 .paragraph .text b, .paragraph .text strong { color: var(--b-font-color-light); }
@@ -107,11 +111,11 @@ body { background-color: var(--bg-light); }
     border-radius: 20px;
     font-size: 2em;
     margin: 0;
-    padding: 10px 20px;
+    padding: 0 10px;
 }
-#search, #create, #searchType { border: none; }
+#search, #create, .customSearch { border: none; }
 #create:hover { cursor: pointer; }
-#create:active, #searchType:active { box-shadow: none; }
+#create:active, .customSearch:active { box-shadow: none; }
 #search { font-variant: normal; }
 #search:focus {
     animation: searchHover .8s;
@@ -129,6 +133,10 @@ body { background-color: var(--bg-light); }
     0% { width: var(--width); }
     100% { width: 253px; }
 }
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% {opacity: 1;}
+}
 .popup {
     position: fixed;
     top: 50%;
@@ -139,6 +147,7 @@ body { background-color: var(--bg-light); }
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn .5s;
 }
 .popup input#header {
     margin-bottom: 5px;
@@ -153,8 +162,8 @@ body { background-color: var(--bg-light); }
     width: 300px;
 }
 @keyframes popupHeaderHover {
-    0% { width: 300px; }
-    100% { width: 500px; }
+    0% {width: 300px;}
+    100% {width: 500px;}
 }
 @keyframes popupHeaderNotHover {
     0% { width: 500px; }
@@ -204,7 +213,7 @@ button.sort {
 }
 @media (prefers-color-scheme: dark) {
     body { background-color: var(--bg-dark); }
-    #search, #searchType, #create, .paragraph .text, .paragraph .preview, button.sort {
+    #search, .customSearch, #create, .paragraph .text, .paragraph .preview, button.sort {
         color: var(--normal-font-color-dark);
         background-color: var(--p-bg-dark);
     }
