@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="opt">
                     <div class="mkd"><input type="checkbox" name="opt-mkd" checked/> Enable Markdown</div>
                     <div class="HTMLPreview"><input type="checkbox" name="opt-HTMLPreview"/> Enable HTML preview (beta)</div>
+                    <div class="havefun"><input type="checkbox" name="opt-havefun"/> Have fun</div>
                 </div>
                 <button id="submit">Submit</button>
                 <button id="close">Close</button><br>
@@ -80,6 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('close').addEventListener('click', () => {
                 document.body.removeChild(popup);
                 document.querySelector('#create').style.display = 'block';
+            });
+
+            document.getElementById('header').addEventListener("input", () => {
+                if (document.getElementById('header').value.toLowerCase().includes("never gonna give you up")) {
+                    document.getElementById('header').style.fontWeight = "bold";
+                } else {
+                    document.getElementById('header').style.fontWeight = "normal";
+                };
             });
 
             /* If clicked submit */
@@ -102,6 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 /* Get header and main */
                 let headerText = document.getElementById('header').value;
                 let mainText = document.getElementById('main').value;
+
+                /* An inmportant func */
+                if (headerText.toLowerCase().includes("never gonna give you up") & popup.querySelector(".opt .havefun input[type=\"checkbox\"]")) {
+                    window.open("https://www.bilibili.com/video/BV1GJ411x7h7/", "_blank");
+                };
 
                 /* Create header element and main element */
                 const header = document.createElement('h2');
