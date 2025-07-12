@@ -67,7 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <input type="text" id="header" placeholder="Header"><br>
                 <textarea id="main" placeholder="Main"></textarea><br>
                 <div class="opt">
-                    <div class="mkd"><input type="checkbox" name="opt-mkd" checked/> Enable Markdown</div>
+                    <div class="mkd">
+		                <input type="checkbox" name="opt-mkd" checked/>&nbsp;Enable Markdown 
+	                    <p class="mkd-sts">&nbsp;Markdown status</p>
+                    </div>
                     <div class="HTMLPreview"><input type="checkbox" name="opt-HTMLPreview"/> Enable HTML preview (beta)</div>
                     <div class="havefun"><input type="checkbox" name="opt-havefun"/> Have fun</div>
                 </div>
@@ -77,11 +80,39 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             document.body.appendChild(popup);
 
+            /* Get options check box */
+            let options = [
+                popup.querySelector(".opt .mkd input[type=\"checkbox\"]"),
+                popup.querySelector(".opt .HTMLPreview input[type=\"checkbox\"]"),
+            ];
+
+            let markdown_status_viewer = popup.querySelector('.mkd-sts');
+            let markdown_status = true;
+            
+            markdown_status_viewer.style.margin = "0";
+
+            try {
+                marked.parse("**Test**");
+            } catch (e) {
+                markdown_status = false;
+            };
+            
+            if (markdown_status) {
+                markdown_status_viewer.textContent = "Markdown is ready";
+                markdown_status_viewer.style.color = "#090";
+                options[0].checked = true;
+            } else {
+                markdown_status_viewer.textContent = "Loading Markdown failed";
+                markdown_status_viewer.style.color = "#f00";
+                options[0].checked = false;
+            };
+
             /* Close the popup */
             document.getElementById('close').addEventListener('click', () => {
                 document.body.removeChild(popup);
                 document.querySelector('#create').style.display = 'block';
             });
+
 
             document.getElementById('header').addEventListener("input", () => {
                 if (document.getElementById('header').value.toLowerCase().includes("never gonna give you up")) {
@@ -98,11 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const paragraph = document.createElement('article');
                 paragraph.className = 'paragraph';
 
-                /* Get options check box */
-                let options = [
-                    popup.querySelector(".opt .mkd input[type=\"checkbox\"]"),
-                    popup.querySelector(".opt .HTMLPreview input[type=\"checkbox\"]"),
-                ];
 
                 /* Get first paragraph of the container and insert a new paragraph before it */
                 const firstChild = container.firstChild;
@@ -185,7 +211,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <input type="text" id="header" placeholder="Header" value="${headerText}"><br>
                         <textarea id="main" placeholder="Main">${mainText}</textarea><br>
                         <div class="opt">
-                            <div class="mkd"><input type="checkbox" name="opt-mkd" ${options[0].checked ? 'checked' : ''}/> Enable Markdown</div>
+                            <div class="mkd"><input type="checkbox" name="opt-mkd" ${options[0].checked ? 'checked' : ''}/> Enable Markdown
+                            <p class="mkd-sts">&nbsp;Markdown status</p></div>
                             <div class="HTMLPreview"><input type="checkbox" name="opt-HTMLPreview" ${options[1].checked ? 'checked' : ''}/> Enable HTML preview (beta)</div>
                         </div>
                         <button id="submitEdit">Submit</button>

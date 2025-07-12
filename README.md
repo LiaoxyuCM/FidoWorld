@@ -76,6 +76,5 @@ v0.1.1 Add more styles.
 
 ## Thanks
 
-1. GitHub Copilot and Deepseek - Gave me some codes
-2. Every contributors in GitHub organization "markedjs" - Gave me a Markdown parser API
-3. Every contributors in GitHub organization "SortableJS" - Gave me a sort API
+1. MarkedJS
+2. Sortable
