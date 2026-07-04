@@ -3,12 +3,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     /* sdfsdfsdfdsdfdsdfsdf */
     const sdfRestaurant = new Date();
-    if (sdfRestaurant.getMonth() === 3 & sdfRestaurant.getDate() === 1) /* It's March 1st, not AprilFool's Day :) */ {
+    if (sdfRestaurant.getMonth() === 3 & sdfRestaurant.getDate() === 1) /* It's March 1st, not AprilFool :) */ {
         document.body.innerHTML = `
             <div id="title">
                 <h1>FidoWorld</h1>
                 <h4>Unfortunately, we suspended our service because of an error.</h4>
-                <h4>We need suggetions!!!</h4>
+                <h4>We need helps!!!</h4>
                 <h5>Error code: 0x59 0x6F 0x75 0x20 0x66 0x6F 0x6F 0x6C 0x21</h5>
             </div>
         `;
@@ -25,14 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const keyword = document.getElementById('search').value.toLowerCase();
                 const paragraphs = document.querySelectorAll('.paragraph');
                 const searchType = document.getElementById('searchType').value;
-                const waysToHideParas = document.getElementById('waysToHideParas').value;
+                const hideParasMethods = document.getElementById('hideParasMethods').value;
 
                 /* Every paragraphs should run this */
                 paragraphs.forEach(paragraph => {
                     /* Get their text content */
                     let text = '';
                     if (searchType === 'header') { text = paragraph.querySelector('h2').textContent.toLowerCase(); }
-                    else if (searchType === 'main') { text = paragraph.querySelector('.text').textContent.toLowerCase(); }
+                    else if (searchType === 'body') { text = paragraph.querySelector('.text').textContent.toLowerCase(); }
                     else { text = paragraph.textContent.toLowerCase(); };
                     
                     
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         paragraph.style.filter = 'none';
                     }
                     else {
-                        if (waysToHideParas === 'bl') {
+                        if (hideParasMethods === 'bl') {
                             paragraph.style.filter = 'blur(5px)';
                         } else {
                             paragraph.style.display = 'none';
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    /* When "New paragraph" button is clicked */
+    /* When "New paragraph" button clicked */
     if (document.getElementById('create')) {
         document.getElementById('create').addEventListener('click', () => {
             /* Show popup */
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <button id="submit">Submit</button>
                 <button id="close">Close</button><br>
-                <p id="popuphint">It always add to first line.<br>To enable HTML preview, you should enable Markdown first</p>
+                <p id="popuphint">This para always insert to the first line.<br>To enable HTML preview, you need to enable Markdown first</p>
             `;
             document.body.appendChild(popup);
 
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 markdown_status_viewer.style.color = "#090";
                 options[0].checked = true;
             } else {
-                markdown_status_viewer.textContent = "Loading Markdown failed";
+                markdown_status_viewer.textContent = "Failed to load Markdown";
                 markdown_status_viewer.style.color = "#f00";
                 options[0].checked = false;
             };
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 deleteBtn.textContent = 'Delete';
                 paragraph.appendChild(deleteBtn);
 
-                /* If user enabled HTML preview */
+                /* If enabled HTML preview */
                 if (options[1].checked) {
                     /* HTML preview */
                     const htmlPages = paragraph.querySelectorAll('div.text pre code.language-html');
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <button id="submitEdit">Submit</button>
                         <button id="close">Close</button><br>
-                        <p id="popuphint">It always add to first line.<br>To enable HTML preview, you should enable Markdown first</p>
+                        <p id="popuphint">It always add to first line.<br>To enable HTML preview, you need to enable Markdown first</p>
                     `;
                     document.body.appendChild(popup);
 
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             paragraph.removeChild(previewHint);
                         });
 
-                        /* If user enabled HTML preview */
+                        /* If enabled HTML preview */
                         if (options[1].checked) {
                             /* HTML preview */
                             const htmlPages = paragraph.querySelectorAll('div.text pre code.language-html');
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
 
-                /* When user clicked the button */
+                /* When clicked the button */
                 deleteBtn.addEventListener('click', () => {
                     if (confirm('Are you sure?')) {
                         /* Remove paragraph */

@@ -14,10 +14,10 @@
         <input type="text" id="search" placeholder="Search paragraphs and press Enter">
         <select class="customSearch" id="searchType">
             <option value="all">Header + main</option>
-            <option value="header">Just header</option>
-            <option value="main">Just main</option>
+            <option value="header">Header only</option>
+            <option value="body">Body only</option>
         </select>
-        <select class="customSearch" id="waysToHideParas">
+        <select class="customSearch" id="hideParasMethods">
             <option value="hd">Hide</option>
             <option value="bl">Blur</option>
         </select>
@@ -33,9 +33,9 @@
                 <h3>Search</h3>
                 Enter a keyword on search bar and select
                 <ul>
-                    <li><b>Header</b> Just search by header</li>
-                    <li><b>Main</b> Just search by main</li>
-                    <li><b>Header+Main</b> Search by header and main</li>
+                    <li><b>Header</b> Header only</li>
+                    <li><b>Main</b> Body only</li>
+                    <li><b>Header+Main</b> Search by header and body</li>
                 </ul>
                 <br>
                 <h3>New paragraph</h3>
@@ -65,11 +65,10 @@
         <article class="paragraph">
             <h2>Help</h2>
             <div class="text">
-                <h3>Having some questions? Try to:</h3>
+                <h3>Having some questions? Try:</h3>
                 <ol>
-                    <li>Check JavaScript is enabled</li>
+                    <li>Check the status of JavaScript (if JavaScript was disabled, enable it.)</li>
                     <li>If do not works, reload the page</li>
-                    <li>If still do not works, <a href="https://github.com/LiaoxyuCM/FidoWorld/issues">submit an issue</a></li>
                 </ol>
             </div>
         </article>

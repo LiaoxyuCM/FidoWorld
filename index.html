@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FidoWorld</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./tools/marked.min.js"></script>
-    <script src="./tools/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -16,17 +16,17 @@
         <input type="text" id="search" placeholder="Search paragraphs and press Enter">
         <select class="customSearch" id="searchType">
             <option value="all">Header + main</option>
-            <option value="header">Just header</option>
-            <option value="main">Just main</option>
+            <option value="header">Header only</option>
+            <option value="body">Body only</option>
         </select>
-        <select class="customSearch" id="waysToHideParas">
+        <select class="customSearch" id="hideParasMethods">
             <option value="hd">Hide</option>
             <option value="bl">Blur</option>
         </select>
         <button id="create">+</button>
     </nav>
     <noscript>
-        <h3 style="color: #FF0;">Warn: You should enable JavaScript to search, add, drag and so on</h3>
+        <h3 style="color: #FF0;">Warn: You need to enable JavaScript to search, add, drag etc.</h3>
     </noscript>
     <section class="container">
         <article class="paragraph">
